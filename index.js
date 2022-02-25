@@ -8,7 +8,7 @@ app.use(express.static('puplic'));
 app.set('view engine','ejs');
 app.set('views','./views');
 app.get('/',function (req,res){
-    res.send('Đây là trang chủ')
+    res.render('home')
 });
 app.get('/productDetail',function (req,res){
     res.render('Products_Detail');
