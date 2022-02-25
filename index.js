@@ -12,4 +12,4 @@ app.get('/',function (req,res){
 });
 app.get('/productDetail',function (req,res){
     res.render('Products_Detail');
-})
+});
