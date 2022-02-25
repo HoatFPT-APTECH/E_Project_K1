@@ -259,6 +259,7 @@ header{
 }
 .introduce-product{
     height: 620px;
+    display: flex;
 }
 .name-product{
     color: black;
@@ -315,6 +316,7 @@ header{
 }
 .buy-now-area{
     display: flex;
+    justify-content: space-between;
 }
 .add-wishlist{
     height: 50px;
@@ -337,13 +339,30 @@ header{
 }
 .share-area{
     display: flex;
-    line-height: 50px;
+    padding-top: 15px;
 }
 .share-area>ul>li{
     float: left;
     padding: 10px;
 }
-.share-area>span{
-    margin-left: 80px;
-    padding-top:10px;
+.thump{
+    display: flex;
+}
+.thump>.content{
+    padding-left: 20px;
+    
+}
+#time{
+    font-weight: 700;
+    font-size: 30px;
+    color: deeppink;
+}
+#sidebar-product{
+   height: 370px;
+    width: 290px;
+    border: 1px solid gray;
+    border-radius:20px ;
+    padding: 20px;
+    padding-left: 50px;
+    box-shadow: 5px 5px 10px lightgray;
 }

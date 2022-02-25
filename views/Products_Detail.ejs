@@ -5,6 +5,7 @@
     <title>product_detail</title>
     <link rel="stylesheet" href="assets/css/Products_Detail.css">
     <%-include("head.ejs")%>
+
 </head>
 <body>
   <header class=" section">
@@ -207,8 +208,8 @@
                  </div>
                  </a>
                  <div class="share-area">
-                     <span style="font-weight: 800;">Share to:</span>
                      <ul>
+                         <li><span style="font-weight: 800;">Share to:</span></li>
                          <li>
                              <a href="#">
                                  <i class="fab fa-facebook-f"></i>
@@ -233,7 +234,45 @@
                  </div>
              </div>
           </div>
-          <div class="introduce-product-right col-md-3"></div>
+          <div class="introduce-product-right col-md-3">
+              <div id="sidebar-product">
+                  <div class="auction-end">
+                      <h5>This Auction Ends in:</h5>
+                      <p id="time">0d:14h:23m:49s</p>
+                  </div>
+                  <div>
+                      <ul>
+                          <li>
+                              <div class="thump">
+                                  <div><img src="./assets/images/product/icon1.png" alt="product"></div>
+                                  <div class="content">
+                                      <h2 id="counter1">61</h2>
+                                      <p>Active Bidders</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="thump">
+                                  <div><img src="./assets/images/product/icon2.png" alt="product"></div>
+                                  <div class="content">
+                                      <h2 id="counter2">203</h2>
+                                      <p>Watching</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="thump">
+                                  <div><img src="./assets/images/product/icon3.png" alt="product"></div>
+                                  <div class="content">
+                                      <h2  id="counter3">82</h2>
+                                      <p>Total Bids</p>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
             </div>
   </section>
 <script type="text/javascript" src="assets/js/Products_Detail.js"></script>
