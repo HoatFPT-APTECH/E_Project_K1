@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product_detail</title>
+    <link rel="stylesheet" href="assets/css/Products_Detail.css">
+    <%-include("head.ejs")%>
+</head>
+<body>
+  <header class=" section">
+      <div class=" header-top">
+          <div class="container" style="display: flex;justify-content: space-between">
+       <ul class="header-top-left">
+           <li>
+               <i class="fas fa-phone-alt"></i><span style="margin-left: 5px">Customor support</span>
+           </li>
+           <li>
+               <i class="fas fa-globe"></i>
+                   <form method="get" action="#" style="display: inline;">
+                   <select name="language" class="language" style="background: none; color: white;border: none">
+                       <option value="English" style="color: black">English</option>
+                       <option value="China" style="color: black">China</option>
+                       <option value="VietNam"style="color: black"> Viet Nam</option>
+                   </select>
+                       </form>
+           </li>
+       </ul>
+        <ul class="header-top-right" >
+            <li >
+                <a class="cast-button" href="#">
+                    <i class="flaticon-shopping-basket" style="color: white"></i>
+                </a>
+            </li>
+            <li >
+                <a href="#" class="user-button">
+                    <i class="flaticon-user" style="color: white"></i>
+                </a>
+            </li>
+        </ul>
+          </div>
+      </div>
+      <div class="header-bottom">
+          <div class="container" style="display: flex; justify-content: space-between;">
+          <div class="logo">
+             <img src="assets/images/logo/logo.png">
+          </div>
+          <div class="menu">
+           <ul class="menu-right" >
+               <li >
+                   <a href="#">Home</a>
+               </li>
+               <li >
+                   <a href="#" >Auction</a>
+               </li>
+               <li >
+                   <a href="#"  class="add page-item">Page</a>
+                    <ul class="sub-menu">
+                        <li class="add">
+                            <a href="#" style="color: black; font-weight: 500">Product</a>
+                        </li>
+                        <li class="add">
+                            <a href="#" style="color: black;font-weight: 500">My Account</a>
+                            <ul class="sub-menu-2">
+                                <li><a href="#"  style="color: black;font-weight: 500">Sign In</a> </li>
+                                <li><a href="#"  style="color: black;font-weight: 500">Sign UP</a> </li>
+                            </ul>
+                        </li>
+                        <li class="add">
+                            <a href="#" style="color: black;font-weight: 500">Dash board</a>
+                            <ul class="sub-menu-2">
+                                <li><a href="#"  style="color: black;font-weight: 500">Dash board</a> </li>
+                                <li><a href="#"  style="color: black;font-weight: 500">Personal Profile</a> </li>
+                                <li><a href="#"  style="color: black;font-weight: 500">My Bids</a> </li>
+                                <li><a href="#"  style="color: black;font-weight: 500">Winning Bids</a> </li>
+                                <li><a href="#"  style="color: black;font-weight: 500">My Alert</a> </li>
+                                <li><a href="#"  style="color: black;font-weight: 500">My Favorites</a> </li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a href="#" style="color: black;font-weight: 500; border-bottom: none">About Us</a>
+                        </li>
+                    </ul>
+               </li>
+               <li ><a href="#">Contact</a> </li>
+           </ul>
+              <form action="#" method="get" class="form-search">
+                  <input type="search" name="search" placeholder="Search product on heare"  class="btt-search"/>
+                  <button type="submit" class="btn btn-group submit" ><i class="fas fa-search"></i></button>
+              </form>
+          </div>
+          </div>
+      </div>
+  </header>
+  <!--end header by mai huy hoat -->
+  <section class="section hero  " >
+    <div class="container">
+        <div class="slide">
+        <!-- Container for the image gallery -->
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="assets/images/product/product1.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="assets/images/product/product2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="assets/images/product/product3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="assets/images/product/product4.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="assets/images/product/product5.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="assets/images/product/product6.png" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row1">
+                <div class="column">
+                    <img class="demo cursor" src="assets/images/product/01.png" style="width:100%" onclick="currentSlide(1)" alt="Image of product:1">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/images/product/02.png" style="width:100%" onclick="currentSlide(2)" alt="Image of product:2">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/images/product/03.png" style="width:100%" onclick="currentSlide(3)" alt="Image of product:3">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/images/product/04.png" style="width:100%" onclick="currentSlide(4)" alt="Image of product:4">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/images/product/05.png" style="width:100%" onclick="currentSlide(5)" alt="Image of product:5">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/images/product/06.png" style="width:100%" onclick="currentSlide(6)" alt="Image of product:6">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="section product-detail">
+      <div class="container introduce-product">
+          <div class="introduce-product-left col-md-8">
+             <div class="name-product">
+                 <h1>The Breexe Zodiac IX</h1>
+                 <ul style="color: dimgray">
+                     <li><h6> Listing ID:14076242 |</h6></li>
+                     <li><h6> Item #:7300-3356862</h6></li>
+                 </ul>
+             </div>
+             <div class="price">
+                <div class="price-detail"style="padding-top:10px ">
+                    <h2>Current Price</h2>
+                    <h1 style="color: #1e7e34">US $ 700.00</h1>
+                </div>
+                <div class="price-detail">
+                    <h6 style="color: dimgray">Buyer's Premium</h6>
+                    <h4 style="color: darkslategray">10.00%</h4>
+                </div>
+                <div class="price-detail">
+                    <h6 style="color: dimgray">Bid Increment(US)</h6>
+                    <h4 style="color: darkslategray">$50.00</h4>
+                </div>
+             </div>
+             <div class="submit-bid">
+                 <div class="logo-submit ">
+                     <img src="assets/images/product/search-icon.png">
+                 </div>
+                 <div  class="form-submit-abid">
+                     <form method="get"action="#">
+                         <input type="number" name="price-submit" placeholder="Enter you amount" >
+                         <button type="submit"  class="button-submit">Submit A Bid</button>
+                     </form>
+                 </div>
+             </div>
+             <div class="buy-now-area">
+                 <form method="get" action="#">
+                     <button type="submit" class="button-submit">BUY NOW:$4,200</button>
+                 </form>
+                 <a href="#">
+                 <div class="add-wishlist">
+                     <i class="fas fa-star" style="color: yellow"></i>
+                         Add To Wishlist
+                 </div>
+                 </a>
+                 <div class="share-area">
+                     <span style="font-weight: 800;">Share to:</span>
+                     <ul>
+                         <li>
+                             <a href="#">
+                                 <i class="fab fa-facebook-f"></i>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#">
+                                 <i class="fab fa-twitter"></i>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#">
+                                 <i class="fab fa-linkedin-in" ></i>
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#">
+                                 <i class="fab fa-instagram" ></i>
+                             </a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+          </div>
+          <div class="introduce-product-right col-md-3"></div>
+            </div>
+  </section>
+<script type="text/javascript" src="assets/js/Products_Detail.js"></script>
+<script type="text/javascript " src="assets/js/jquery.js"></script>
+</body>
+</html>
