@@ -13,3 +13,12 @@ app.get('/',function (req,res){
 app.get('/productDetail',function (req,res){
     res.render('Products_Detail');
 });
+app.get('/contact_Us',function (req,res){
+    res.render('contact_Us');
+});
+app.get('/Sign_In',function (req,res){
+    res.render('Sign_In');
+});
+app.get('/Sign_Up',function (req,res){
+    res.render('Sign_Up');
+});
