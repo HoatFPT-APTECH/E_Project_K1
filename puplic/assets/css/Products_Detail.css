@@ -253,8 +253,6 @@ header{
 .demo {
     opacity: 0.6;
 }
-
-.active,
 .demo:hover {
     opacity: 1;
 }
@@ -364,7 +362,7 @@ header{
 }
 #sidebar-product{
    height: 370px;
-    width: 290px;
+    width: 330px;
     border: 1px solid gray;
     border-radius:20px ;
     padding: 20px;
@@ -380,6 +378,7 @@ header{
     background-color: #ebf2ff;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .nav-about-product ul{
     display: flex;
@@ -398,7 +397,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-
+   background-color:#ebf2ff ;
+}
+.nav-about-product ul>li>.block:focus{
+    background-color: white;
 }
 .nav-about-product ul>li>.block>span{
     padding-left: 10px;
@@ -417,3 +419,51 @@ td{
 .important{
     background-color:#ebf2ff ;
 }
+.bid-history .load-more{
+    width: 100%;
+    height:80px;
+    background-color:#ebf2ff ;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.faq-wrapper{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+}
+.faq-item{
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #ebf2ff;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.faq-item .answer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+.faq-item:focus .answer{
+    border-bottom: 1px solid gray;
+    color: red;
+    transition: 1s;
+}
+.faq-item .question{
+    line-height: 1.5;
+    display: none;
+}
+.faq-item:focus .question{
+    display: block;
+}
+.faq-wrapper .faq-item .right-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding-top: 5px;
+ }
+

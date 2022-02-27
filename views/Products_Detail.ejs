@@ -277,48 +277,48 @@
             </div>
   </section>
   <section class="section about-product ">
-      <div class="nav-about-product">
+      <div class="nav-about-product" >
           <div class="container">
           <ul>
               <li>
-                  <div class="block" >
+                  <button class="block" onclick="show(1)" >
                       <img src="./assets/images/product/tab1.png" alt="product">
                       <span>Description</span>
-                  </div>
+                  </button>
               </li>
               <li>
-                  <div class="block" >
+                  <button class="block" onclick="show(2)" >
                       <img src="./assets/images/product/tab2.png" alt="product">
                       <span>Delivery Options</span>
-                  </div>
+                  </button>
               </li>
               <li>
-                  <div class="block" >
+                  <button class="block" onclick="show(3)" >
                       <img src="./assets/images/product/tab3.png" alt="product">
                       <span>Bid History</span>
-                  </div>
+                  </button>
               </li>
               <li>
-                  <div class="block" >
+                  <button class="block" onclick="show(4)" >
                       <img src="./assets/images/product/tab4.png" alt="product">
                       <span>Question</span>
-                  </div>
+                  </button>
               </li>
           </ul>
           </div>
       </div>
       <div >
           <div class="container">
-              <div class="discription">
+              <div id="discription" >
           <h2>2012 Ford Escape Hybrid (Brooklyn, NY 11214)</h2>
-          <pre>NYC Fleet / DCAS units may be located at either of two locations:
+                  <p><h5>NYC Fleet / DCAS units may be located at either of two locations:</h5>
 Brooklyn, NY (1908 Shore Parkway)
 Medford, NY (66 Peconic Ave)
-This unit is located at:
+                  <h5>This unit is located at:</h5>
 Kenben Industries Ltd.
 1908 Shore Parkway
 Brooklyn, NY 11214
-Acceptance of condition - buyer inspection/preview
+                  <h5>Acceptance of condition - buyer inspection/preview</h5>
 Vehicles and equipment often display significant wear and tear. Assets are sold AS IS with no warranty, express or implied, and we highly recommend previewing them before bidding. The preview period is the only opportunity to inspect an asset to verify condition and suitability. No refunds, adjustments or returns will be entertained.
 
 Vehicle preview inspections of the vehicle can be done at the below location on Monday and Tuesday from 10am - 2pm. See Preview Rules Here.
@@ -328,30 +328,30 @@ Kenben Industries Ltd.
 Brooklyn, NY 11214
 BUYER is responsible for all storage fees at time of pick-up. See above under IMPORTANT PICK-UP TIMES for specific requirements for this asset, but generally assets must be picked up within 2 business days of payment otherwise additional storage fees will be applied.
 
-Legal Notice
+                  <h5>Legal Notice</h5>
 Vehicles may not be driven off the lot except with a dealer plate affixed. By law, vehicles are not permitted to be parked on or to drive on the streets of New York without registration and plates registered to the vehicle. If the buyer cannot obtain the required registration and plates prior to pick up, they should have the vehicle towed at their own expense. The buyer should have the vehicle towed at their own expense.
 
 Condition: Untested - Sold As-Is
 
 Employees of Sbidu, its subcontractors and affiliated companies, employees of the NYC Government and those bidding on behalf of PropertyRoom.com, its subcontractors and affiliated companies and employees of the NYC Government are not permitted to bid on or purchase NYC Fleet/DCAS assets.
 
-Condition
+                  <h5>Condition</h5>
 This ASSET is being listed on behalf of a law enforcement agency or other partner ("SELLER") by PropertyRoom.com on a Sold AS IS, WHERE IS, WITH ALL FAULTS basis, with no representation or warranty from PropertyRoom.com or SELLER. In many cases, the car, boat, truck, motorcycle, aircraft, mowers/tractors, etc. ("ASSET") sold on PropertyRoom.com comes from seizure or forfeiture, and the SELLER typically does not possess use-based knowledge of the ASSET. Further, PropertyRoom.com does not physically inspect the ASSET and cannot attest to actual working conditions. PropertyRoom.com and SELLER gather information about the ASSET from authoritative sources; still, errors may appear from time to time in the listing. PropertyRoom.com cautions any website user, shopper, bidder, etc. ("BUYER") to attempt to confirm, with us, information material to a bidding/purchasing decision.
 
 Bidding
 At this time Sbidu only accepts bidders from the United States, Canada and Mexico on Vehicles and Heavy Industrial Equipment. The Bid Now button will appear on auctions where you are qualified to place a bid.
 
-Buyer Responsibility
+                  <h5>Buyer Responsibility</h5>
 The BUYER will receive an email notification from PropertyRoom.com following the close of an auction. After fraud verification and payment settlement, we will email the BUYER instructions for retrieving the ASSET from the Will-Call Location listed above.
 
 All applicable shipping, logistics, transportation, customs, fees, taxes, export/import activities and all associated costs are the sole responsibility of the BUYER. No shipping, customs, export or import assistance is available from Sbidu.
 
 When applicable for a given ASSET, BUYER bears responsibility for determining motor vehicle registration requirements in the applicable jurisdiction as well as costs, including any fees, registration fees, taxes, etc., owed as a result of BUYER registering an ASSET; for example, BUYER bears sole responsibility for all title/registration/smog and other such fees.
 
-BUYER is responsible for all storage fees at time of pick-up. See above under IMPORTANT PICK-UP TIMES for specific requirements for this asset, but generally assets must be picked up within 2 business days of payment otherwise additional storage fees will be applied.</pre>
+BUYER is responsible for all storage fees at time of pick-up. See above under IMPORTANT PICK-UP TIMES for specific requirements for this asset, but generally assets must be picked up within 2 business days of payment otherwise additional storage fees will be applied.</p>
       </div>
           </div>
-          <div class="Delivery-options">
+          <div id="Delivery-options" style="display: none">>
               <div class="container">
               <h3>
                   Shipping
@@ -377,6 +377,150 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
               <h3>Notes</h3>
               <pre>Please carefully review our shipping and returns policy before committing to a bid. From time to time, and at its sole discretion, Sbidu may change the prevailing fee structure for shipping and handling.</pre>
           </div>
+          </div>
+          <div id="bid-history" style="display: none">>
+              <div class="container">
+              <h2>Bid History</h2>
+              <table class="important" STYLE="width: 100%">
+                  <tr>
+                      <td >Bidder</td>
+                      <td>Date</td>
+                      <td>Time</td>
+                      <td>Unit Price</td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <img src="./assets/images/history/01.png" alt="history">
+                          <span>Moses Watts</span>
+                      </td>
+                      <td>06/16/2021</td>
+                      <td>02:45:25 PM</td>
+                      <td>$900.00</td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <img src="./assets/images/history/02.png" alt="history">
+                      <span>Pat Powell</span>
+                      </td>
+                      <td>06/16/2021</td>
+                      <td>02:45:25 PM</td>
+                      <td>$900.00</td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <img src="./assets/images/history/03.png" alt="history">
+                      <span>Jack Rodgers</span>
+                      </td>
+                      <td>06/16/2021</td>
+                      <td>02:45:25 PM</td>
+                      <td>$900.00</td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <img src="./assets/images/history/04.png" alt="history">
+                      <span>Arlene Paul</span>
+                      </td>
+                      <td>06/16/2021</td>
+                      <td>02:45:25 PM</td>
+                      <td>$900.00</td>
+                  </tr>
+                  <tr>
+                      <td>
+                      <img src="./assets/images/history/05.png" alt="history">
+                      <span>Marcia Clarke</span>
+                      </td>
+                      <td>06/16/2021</td>
+                      <td>02:45:25 PM</td>
+                      <td>$900.00</td>
+                  </tr>
+              </table>
+                  <div CLASS="load-more">
+                      <a href="#">
+                          <div class="add-wishlist">
+                             LOAD MORE
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div id="question" style="display: none">>
+              <div class="container">
+                  <h2>Frequently Asked Questions</h2>
+                  <div class="faq-wrapper">
+                      <button class="faq-item">
+                          <div class="answer"  >
+                          <div class="faq-title">   <img src="./assets/css/img/faq.png" alt="css">
+                              <span>How to start bidding ?</span></div>
+                          <div class="right-icon ">
+                             <img src="assets/images/product/plus.png" width="40px" height="40px">
+                          </div>
+                          </div>
+                          <div class="question">
+                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                          </div>
+                      </button>
+                      <button class="faq-item">
+                          <div class="answer"  >
+                              <div class="faq-title">   <img src="./assets/css/img/faq.png" alt="css">
+                                  <span>Security Deposit/ Bidding Power</span></div>
+                              <div class="right-icon ">
+                                  <img src="assets/images/product/plus.png" width="40px" height="40px">
+                              </div>
+                          </div>
+                          <div class="question">
+                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                          </div>
+                      </button>
+                      <button class="faq-item">
+                          <div class="answer"  >
+                              <div class="faq-title">   <img src="./assets/css/img/faq.png" alt="css">
+                                  <span>How to register to bid in an auction</span></div>
+                              <div class="right-icon ">
+                                  <img src="assets/images/product/plus.png" width="40px" height="40px">
+                              </div>
+                          </div>
+                          <div class="question">
+                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                          </div>
+                      </button>
+                      <button class="faq-item">
+                          <div class="answer"  >
+                              <div class="faq-title">   <img src="./assets/css/img/faq.png" alt="css">
+                                  <span>Delivery time to the destination port</span></div>
+                              <div class="right-icon ">
+                                  <img src="assets/images/product/plus.png" width="40px" height="40px">
+                              </div>
+                          </div>
+                          <div class="question">
+                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                          </div>
+                      </button>
+                      <button class="faq-item">
+                          <div class="answer"  >
+                              <div class="faq-title">   <img src="./assets/css/img/faq.png" alt="css">
+                                  <span>How will i know if my bid was successfull</span></div>
+                              <div class="right-icon ">
+                                  <img src="assets/images/product/plus.png" width="40px" height="40px">
+                              </div>
+                          </div>
+                          <div class="question">
+                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                          </div>
+                      </button>
+                      <button class="faq-item">
+                          <div class="answer"  >
+                              <div class="faq-title">   <img src="./assets/css/img/faq.png" alt="css">
+                                  <span>What happens if I bid on th weong lot?</span></div>
+                              <div class="right-icon ">
+                                  <img src="assets/images/product/plus.png" width="40px" height="40px">
+                              </div>
+                          </div>
+                          <div class="question">
+                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                          </div>
+                      </button>
+                  </div>
+              </div>
           </div>
       </div>
   </section>
