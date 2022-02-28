@@ -1,3 +1,4 @@
+
 <header class=" section">
     <div class=" header-top">
         <div class="container" style="display: flex;justify-content: space-between">
@@ -20,6 +21,9 @@
                 <li >
                     <a class="cast-button" href="#">
                         <i class="flaticon-shopping-basket" style="color: white"></i>
+                        <div class="number-product-buy">
+                            08
+                        </div>
                     </a>
                 </li>
                 <li >
@@ -75,26 +79,11 @@
                     <li ><a href="#">Contact</a> </li>
                 </ul>
                 <form action="#" method="get" class="form-search">
-                    <input type="search" name="search" placeholder="Search product on heare"  class="btt-search"/>
-                    <button type="submit" class="btn btn-group submit" ><i class="fas fa-search"></i></button>
+                    <input type="search" name="search" placeholder="Search product on here"  class="btt-search" />
+                    <button type="submit" class="btn btn-group submit" style="color: white;height:40px;width: 40px;border-radius: 50% " ><i class="fas fa-search"></i></button>
                 </form>
             </div>
         </div>
     </div>
 </header>
-<script type="text/javascript">
-    // fixed header
-    var he=document.getElementById('header-bottom');
-    function onScroll() {
-        window.addEventListener("scroll", callbackFunc);
-        function callbackFunc() {
-            var y = window.scrollY;
-            if (y > 150) {
-                he.classList.add("scroll");
-            } else {
-                he.classList.remove("scroll");
-            }
-        }
-    };
-    onScroll();
-</script>
+<div class="hero"></div>

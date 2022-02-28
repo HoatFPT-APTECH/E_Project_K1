@@ -42,6 +42,20 @@ li .cast-button{
     float: left;
     padding-left: 30px;
 }
+.number-product-buy{
+    width: 20px;
+    height: 20px;
+    background-color: #5a4bcc;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -39px;
+    right: -23px;
+}
 li .user-button{
     width: 40px;
     height: 40px;
@@ -147,10 +161,26 @@ ul.sub-menu>li:hover>ul.sub-menu-2{
     text-align: center;
     height: 40px;
     border-radius: 20px;
+    border: 1px solid white;
+    width: 500px;
+}
+.btt-search::placeholder{
+    color: white;
+    font-size: 14px;
 }
 header{
     color: white;
     height: 144px;
     position: relative;
     z-index: 99;
+}
+
+/* end header*/
+.hero{
+    height:700px;
+    width: 100%;
+    background-image: url("../images/banner/hero-bg.png");
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
 }
