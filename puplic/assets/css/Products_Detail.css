@@ -466,4 +466,38 @@ td{
     border-radius: 50%;
     padding-top: 5px;
  }
+footer{
+    background-image: url("../images/footer/footer-bg.jpg");
+    background-size: cover;
+    margin-top: 90px;
+}
+.form-footer{
+    width: 100%;
+    height: 330px;
+    border-radius: 30px;
+    padding: 30px 20px;
+    box-shadow: 5px 5px 10px gray;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    margin-top: 200px;
+}
+.background-footer{
+    height: 0;
+}
+.img-footer{
+    position: relative;
+    top:-31px
+}
+.Subcribe{
+    padding-top: 60px;
 
+}
+.Subcribe input{
+    border-radius: 20px;
+    width: 300px;
+    border: 1px solid gray;
+    height: 50px;
+    box-shadow: 5px 5px 10px #b1dfbb;
+    text-align: center;
+}
