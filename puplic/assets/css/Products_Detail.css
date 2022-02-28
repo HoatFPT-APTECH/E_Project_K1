@@ -42,6 +42,20 @@ a{
      float: left;
      padding-left: 30px;
  }
+ .number-product-buy{
+     width: 20px;
+     height: 20px;
+     background-color: #5a4bcc;
+     color: white;
+     border-radius: 50%;
+     font-size: 12px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     top: -39px;
+     right: -23px;
+ }
  li .user-button{
      width: 40px;
      height: 40px;
@@ -147,7 +161,13 @@ ul.sub-menu>li{
      text-align: center;
      height: 40px;
      border-radius: 20px;
+     border: 1px solid white;
+     width: 500px;
  }
+.btt-search::placeholder{
+    color: white;
+    font-size: 14px;
+}
 header{
     color: white;
     height: 144px;
@@ -357,12 +377,11 @@ header{
 }
 #time{
     font-weight: 700;
-    font-size: 30px;
+    font-size:25px;
     color: deeppink;
 }
 #sidebar-product{
-   height: 370px;
-    width: 330px;
+    width: 320px;
     border: 1px solid gray;
     border-radius:20px ;
     padding: 20px;
@@ -466,10 +485,12 @@ td{
     border-radius: 50%;
     padding-top: 5px;
  }
+/*Start footer*/
 footer{
     background-image: url("../images/footer/footer-bg.jpg");
     background-size: cover;
     margin-top: 90px;
+
 }
 .form-footer{
     width: 100%;
@@ -500,4 +521,32 @@ footer{
     height: 50px;
     box-shadow: 5px 5px 10px #b1dfbb;
     text-align: center;
+}
+.footer-contact{
+    margin-top:80px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+.footer-contact ul>li>a{
+    color: white;
+    line-height: 30px;
+}
+.footer-contact ul>li>a:hover{
+    color: orange;
+}
+.footer-contact ul>li>a>i{
+    padding-right: 10px;
+}
+.end-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.pay-area{
+    padding-top: 30px;
+}
+.end-footer>.pay-area ul>li{
+    float: left;
+    padding-right: 10px;
 }
