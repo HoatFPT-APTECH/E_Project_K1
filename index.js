@@ -13,8 +13,8 @@ app.get('/',function (req,res){
     })
 });
 var products=[
-    {ID:1,
-        item:1,
+    {ID:0,
+        item:0,
         nameProduct:'Xe Lamborghini Raventado',
         img1:'https://media.laodong.vn/Storage/NewsPortal/2019/6/10/738354/595097.jpg',
         img2:'https://media.laodong.vn/Storage/NewsPortal/2019/6/10/738354/595098.jpg',
@@ -25,15 +25,15 @@ var products=[
         priceCurrent:2000000,
         bidIncrement:10000,
         description:'Siêu xe duy nhất trên thế giới không có chiếc thứ 2',
-        time:{
+        timeEnd:{
             day:10,
             hour:3,
             min:25,
             second:44
         }
     },
-    {ID:2,
-        item:2,
+    {ID:1,
+        item:1,
         nameProduct:'Huyndai Sonata 2018 New',
         img1:'https://anh.24h.com.vn/upload/1-2017/images/2017-03-09/1489042359-148904035627142-01.jpg',
         img2:'https://dailyhyundaigialai.com/wp-content/uploads/2018/02/Hyundai-Sonata-2018-noi-that.jpg',
@@ -43,8 +43,14 @@ var products=[
         img6:'https://tuvanmuaxe.vn/upload/upload_img/images/Hyundai-Sonata-2018-chi-tiet-tuvanmuaxe_vn-6.jpg',
         priceCurrent:50000,
         bidIncrement:2000,
-        description:'Xe Huyndai Sonata 2018 New : Dòng xe hot nhất trên thị trường hiện nay'
-    }
+        description:'Xe Huyndai Sonata 2018 New : Dòng xe hot nhất trên thị trường hiện nay',
+        timeEnd:{
+            day:10,
+            hour:3,
+            min:25,
+            second:44
+        }
+    },
 ];
 app.get('/productDetail',function (req,res){
     res.render('Products_Detail',{
