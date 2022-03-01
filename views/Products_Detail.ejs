@@ -105,32 +105,32 @@
             <!-- Full-width images with number text -->
             <div class="mySlides">
                 <div class="numbertext">1 / 6</div>
-                <img src="assets/images/product/product1.png" style="width:100%">
+                <img src="<%=products[0].img1%>" >
             </div>
 
             <div class="mySlides">
                 <div class="numbertext">2 / 6</div>
-                <img src="assets/images/product/product2.png" style="width:100%">
+                <img src="<%=products[0].img2%>" >
             </div>
 
             <div class="mySlides">
                 <div class="numbertext">3 / 6</div>
-                <img src="assets/images/product/product3.png" style="width:100%">
+                <img src="<%=products[0].img3%>">
             </div>
 
             <div class="mySlides">
                 <div class="numbertext">4 / 6</div>
-                <img src="assets/images/product/product4.png" style="width:100%">
+                <img src="<%=products[0].img4%>" >
             </div>
 
             <div class="mySlides">
                 <div class="numbertext">5 / 6</div>
-                <img src="assets/images/product/product5.png" style="width:100%">
+                <img src="<%=products[0].img5%>" >
             </div>
 
             <div class="mySlides">
                 <div class="numbertext">6 / 6</div>
-                <img src="assets/images/product/product6.png" style="width:100%">
+                <img src="<%=products[0].img6%>" >
             </div>
 
             <!-- Next and previous buttons -->
@@ -145,22 +145,22 @@
             <!-- Thumbnail images -->
             <div class="row1">
                 <div class="column">
-                    <img class="demo cursor" src="assets/images/product/01.png" style="width:100%" onclick="currentSlide(1)" alt="Image of product:1">
+                    <img class="demo cursor" src="<%=products[0].img1%>"  onclick="currentSlide(1)" alt="Image of product:1">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="assets/images/product/02.png" style="width:100%" onclick="currentSlide(2)" alt="Image of product:2">
+                    <img class="demo cursor" src="<%=products[0].img2%>" onclick="currentSlide(2)" alt="Image of product:2">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="assets/images/product/03.png" style="width:100%" onclick="currentSlide(3)" alt="Image of product:3">
+                    <img class="demo cursor" src="<%=products[0].img3%>"  onclick="currentSlide(3)" alt="Image of product:3">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="assets/images/product/04.png" style="width:100%" onclick="currentSlide(4)" alt="Image of product:4">
+                    <img class="demo cursor" src="<%=products[0].img4%>"  onclick="currentSlide(4)" alt="Image of product:4">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="assets/images/product/05.png" style="width:100%" onclick="currentSlide(5)" alt="Image of product:5">
+                    <img class="demo cursor" src="<%=products[0].img5%>"  onclick="currentSlide(5)" alt="Image of product:5">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="assets/images/product/06.png" style="width:100%" onclick="currentSlide(6)" alt="Image of product:6">
+                    <img class="demo cursor" src="<%=products[0].img6%>"  onclick="currentSlide(6)" alt="Image of product:6">
                 </div>
             </div>
         </div>
@@ -170,16 +170,16 @@
       <div class="container introduce-product">
           <div class="introduce-product-left col-md-8">
              <div class="name-product">
-                 <h1>The Breexe Zodiac IX</h1>
+                 <h1><%= products[0].nameProduct %></h1>
                  <ul style="color: dimgray">
-                     <li><h6> Listing ID:14076242 |</h6></li>
-                     <li><h6> Item #:7300-3356862</h6></li>
+                     <li><h6> Listing ID:<%= products[0].ID%> |</h6></li>
+                     <li><h6> Item #: <%= products[0].item %></h6></li>
                  </ul>
              </div>
              <div class="price">
                 <div class="price-detail"style="padding-top:10px ">
                     <h2>Current Price</h2>
-                    <h1 style="color: #1e7e34">US $ 700.00</h1>
+                    <h1 style="color: #1e7e34">US $ <%= products[0].priceCurrent%></h1>
                 </div>
                 <div class="price-detail">
                     <h6 style="color: dimgray">Buyer's Premium</h6>
@@ -187,7 +187,7 @@
                 </div>
                 <div class="price-detail">
                     <h6 style="color: dimgray">Bid Increment(US)</h6>
-                    <h4 style="color: darkslategray">$50.00</h4>
+                    <h4 style="color: darkslategray">$<%= products[0].bidIncrement %></h4>
                 </div>
              </div>
              <div class="submit-bid">
@@ -313,7 +313,7 @@
       <div >
           <div class="container">
               <div id="discription" >
-          <h2>2012 Ford Escape Hybrid (Brooklyn, NY 11214)</h2>
+          <h2><%= products[0].description%></h2>
                   <p><h5>NYC Fleet / DCAS units may be located at either of two locations:</h5>
 Brooklyn, NY (1908 Shore Parkway)
 Medford, NY (66 Peconic Ave)
