@@ -359,10 +359,141 @@ N'https://rolex.dafc.com.vn/wp-content/uploads/watch-assets-on-wrist/landscape_a
 		1000,--priceCurrent
 		100,--bidIncrement
 		1500,----buyNow
-		N'Coin Italy 1984 is old coin.',--description
+		N'Aside Apartment in HaNoi,Viet Nam is best apartment in VietNam.',--description
 		1,--timeEnd_day
 		3,--timeEnd_hour
 		25,--timeEnd_minute
 		44,--timeEnd_second
 		5),--ID
-		--- end Real Estate
+		--- end Real Estate*************************************************************************
+		(N'   Carlo Ratti Associati  ', -- name product
+               N'https://rrsg.s3.amazonaws.com/wp-content/uploads/2020/06/30175410/Super-Veloce-4.jpg',--img1
+        N'https://rrsg.s3.amazonaws.com/wp-content/uploads/2020/06/30175057/Super-Veloce-2.jpg',--img2
+        N'https://rrsg.s3.amazonaws.com/wp-content/uploads/2020/06/30175102/Super-Veloce-3.jpg',--img3
+        N'https://rrsg.s3.amazonaws.com/wp-content/uploads/2020/06/30175410/Super-Veloce-4.jpg',--img4
+        N'https://rrsg.s3.amazonaws.com/wp-content/uploads/2020/06/30175057/Super-Veloce-2.jpg',--img5
+        N'https://rrsg.s3.amazonaws.com/wp-content/uploads/2020/06/30175102/Super-Veloce-3.jpg',--img6
+		1000,--priceCurrent
+		100,--bidIncrement
+		1500,----buyNow
+		N'Carlo Ratti Associati is best product . You can find.',--description
+		1,--timeEnd_day
+		3,--timeEnd_hour
+		25,--timeEnd_minute
+		44,--timeEnd_second
+		6),--ID
+		(N' TV Oled KD-55A8G ', -- name product
+               N'',--img1
+        N'https://thegioidienmayonline.com/wp-content/uploads/2019/07/55a8g_1.jpg',--img2
+        N'https://dienmaythienphu.vn/wp-content/uploads/2022/01/XR-55A90J.jpg',--img3
+        N'https://manhnguyen.com.vn/img/uploads/lib/11244_tivi-sony-kd-55a9f-7.jpg',--img4
+        N'https://cdn.tgdd.vn/Files/2017/01/05/934287/-ces-2017-sony-ra-mat-tivi-oled-4k-dau-tien-cua-minh-5.png',--img5
+        N'https://cdn.tgdd.vn/Files/2017/01/05/934287/-ces-2017-sony-ra-mat-tivi-oled-4k-dau-tien-cua-minh-7.jpg',--img6
+		1000,--priceCurrent
+		100,--bidIncrement
+		1500,----buyNow
+		N'TV Oled kd-55A8G is best product . You can find.',--description
+		1,--timeEnd_day
+		3,--timeEnd_hour
+		25,--timeEnd_minute
+		44,--timeEnd_second
+		6),--ID
+		
+			(N' Dell Alienware Area-51m', -- name product
+               N'https://bizweb.dktcdn.net/100/330/208/files/1-laptop-gaming-dat-nhat-the-gioi.jpg?v=1609520666055',--img1
+        N'https://bizweb.dktcdn.net/100/330/208/files/3-laptop-gaming-dat-nhat-the-gioi-dell-alienware-area-51m.jpg?v=1609520397907',--img2
+        N'https://bizweb.dktcdn.net/100/330/208/files/4-laptop-gaming-dat-nhat-the-gioi-dell-alienware-area-51m.jpg?v=1609520386855',--img3
+        N'https://laptopxachtay.com.vn/Images/Products/asus-zenbook-ux534ft-a9047t-i5-8265u-8gb-512g-ssd-gtx1650-4gb-15-6-fhd-win10-blue_39043_1.jpg',--img4
+        N'https://dmart.vn/uploads/637076201531114542_asus-zenbook-ux434-xanh-2.png',--img5
+        N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNdLwS0HKHPaWBAAtVeS5NXez5CnTLehdZGdKwREN4ZqnCPKLi9gngL64WuZKw_7s_zS4&usqp=CAU',--img6
+		1000,--priceCurrent
+		100,--bidIncrement
+		1500,----buyNow
+		N' Dell Alienware Area-51m is best product . You can find.',--description
+		1,--timeEnd_day
+		3,--timeEnd_hour
+		25,--timeEnd_minute
+		44,--timeEnd_second
+		6),--ID
+			(N' Asus Rog phone 2', -- name product
+               N'https://cdn.nguyenkimmall.com/images/companies/_1/tin-tuc/top-san-pham/%C4%91i%E1%BB%87n%20tho%E1%BA%A1i/1-2-dien-thoai-choi-game-tot.jpg.jpg',--img1
+        N'https://manhinhledghep.com/wp-content/uploads/2020/12/dien-thoai-choi-game-tot-nhat-hien-nay.jpg',--img2
+        N'https://mistore.com.vn/wp-content/uploads/2020/03/black-shark-3-trang.jpg',--img3
+        N'https://product.hstatic.net/1000238589/product/xiaomi_black_shark_helo.png',--img4
+        N'https://www.xtmobile.vn/vnt_upload/product/05_2020/thumbs/600_600_black_sharrk_3_xtmobile.jpg',--img5
+        N'https://cdn.tgdd.vn/Products/Images/42/161679/xiaomi-black-shark-600x600.jpg',--img6
+		1000,--priceCurrent
+		100,--bidIncrement
+		1500,----buyNow
+		N'Carlo Ratti Associati is best product . You can find.',--description
+		1,--timeEnd_day
+		3,--timeEnd_hour
+		25,--timeEnd_minute
+		44,--timeEnd_second
+		6),--ID
+		--***end electronic **************************************
+		(N' Fride Kahlo"Dego Art', -- name product
+               N'https://static01.nyt.com/images/2021/11/16/arts/16frida-kahlo-auctio-1/16frida-kahlo-auctio-1-mediumSquareAt3X-v3.jpg',--img1
+        N'https://static01.nyt.com/images/2021/11/16/arts/16frida-kahlo-auctio-1/16frida-kahlo-auctio-1-mediumSquareAt3X-v3.jpg',--img2
+        N'https://static01.nyt.com/images/2021/11/16/arts/16frida-kahlo-auctio-1/16frida-kahlo-auctio-1-mediumSquareAt3X-v3.jpg',--img3
+        N'https://static01.nyt.com/images/2021/11/16/arts/16frida-kahlo-auctio-1/16frida-kahlo-auctio-1-mediumSquareAt3X-v3.jpg',--img4
+        N'https://static01.nyt.com/images/2021/11/16/arts/16frida-kahlo-auctio-1/16frida-kahlo-auctio-1-mediumSquareAt3X-v3.jpg',--img5
+        N'https://static01.nyt.com/images/2021/11/16/arts/16frida-kahlo-auctio-1/16frida-kahlo-auctio-1-mediumSquareAt3X-v3.jpg',--img6
+		1000,--priceCurrent
+		100,--bidIncrement
+		1500,----buyNow
+		N'Fride Kahlo"Dego Art is best product . You can find.',--description
+		1,--timeEnd_day
+		3,--timeEnd_hour
+		25,--timeEnd_minute
+		44,--timeEnd_second
+		6),--ID
+			(N'David Hockney"s Art ', -- name product
+               N'',--img1
+        N'https://api.time.com/wp-content/uploads/2018/11/gettyimages-1032819628.jpg',--img2
+        N'https://api.time.com/wp-content/uploads/2018/11/gettyimages-1032819628.jpg',--img3
+        N'https://api.time.com/wp-content/uploads/2018/11/gettyimages-1032819628.jpg',--img4
+        N'https://api.time.com/wp-content/uploads/2018/11/gettyimages-1032819628.jpg',--img5
+        N'https://api.time.com/wp-content/uploads/2018/11/gettyimages-1032819628.jpg',--img6
+		1000,--priceCurrent
+		100,--bidIncrement
+		1500,----buyNow
+		N'Fride Kahlo"Dego Art is best product . You can find.',--description
+		1,--timeEnd_day
+		3,--timeEnd_hour
+		25,--timeEnd_minute
+		44,--timeEnd_second
+		6),--ID
+			(N' Botto",the robot creating works of Art', -- name product
+               N'https://static.euronews.com/articles/stories/06/27/32/20/400x225_cmsv2_2c37d463-eec9-5386-9c09-4e5d07329d82-6273220.jpg',--img1
+        N'https://static.euronews.com/articles/stories/06/27/32/20/400x225_cmsv2_2c37d463-eec9-5386-9c09-4e5d07329d82-6273220.jpg',--img2
+        N'https://static.euronews.com/articles/stories/06/27/32/20/400x225_cmsv2_2c37d463-eec9-5386-9c09-4e5d07329d82-6273220.jpg',--img3
+        N'https://static.euronews.com/articles/stories/06/27/32/20/400x225_cmsv2_2c37d463-eec9-5386-9c09-4e5d07329d82-6273220.jpg',--img4
+        N'https://static.euronews.com/articles/stories/06/27/32/20/400x225_cmsv2_2c37d463-eec9-5386-9c09-4e5d07329d82-6273220.jpg',--img5
+        N'https://static.euronews.com/articles/stories/06/27/32/20/400x225_cmsv2_2c37d463-eec9-5386-9c09-4e5d07329d82-6273220.jpg',--img6
+		1000,--priceCurrent
+		100,--bidIncrement
+		1500,----buyNow
+		N'Botto",the robot creating works of Art is best product . You can find.',--description
+		1,--timeEnd_day
+		3,--timeEnd_hour
+		25,--timeEnd_minute
+		44,--timeEnd_second
+		6),--ID
+		(N'AstaGuru"contemporary Art', -- name product
+               N'https://images.indianexpress.com/2022/02/AstaGuru.jpg',--img1
+        N'https://images.indianexpress.com/2022/02/AstaGuru.jpg',--img2
+        N'https://images.indianexpress.com/2022/02/AstaGuru.jpg',--img3
+        N'https://images.indianexpress.com/2022/02/AstaGuru.jpg',--img4
+        N'https://images.indianexpress.com/2022/02/AstaGuru.jpg',--img5
+        N'https://images.indianexpress.com/2022/02/AstaGuru.jpg',--img6
+		1000,--priceCurrent
+		100,--bidIncrement
+		1500,----buyNow
+		N'AstaGuru"contemporary Art is best product . You can find.',--description
+		1,--timeEnd_day
+		3,--timeEnd_hour
+		25,--timeEnd_minute
+		44,--timeEnd_second
+		6);
+
