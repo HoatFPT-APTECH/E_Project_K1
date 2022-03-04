@@ -4,19 +4,18 @@ const port=8080;
 app.listen(port,function (err){
     console.log('Serve is running. To check please access browser on : localhost:8080')
 });
+
 app.use(express.static('puplic'));
 app.set('view engine','ejs');
 app.set('views','./views');
 app.get('/',function (req,res){
-    res.render('home')
-});
-app.get('/homeTest',function (req,res){
     res.render('homeTest',{
         products:products
     })
 });
 var products=[
     {ID:0,
+        item:0,
         nameProduct:'Xe Lamborghini Raventado',
         img1:'https://media.laodong.vn/Storage/NewsPortal/2019/6/10/738354/595097.jpg',
         img2:'https://media.laodong.vn/Storage/NewsPortal/2019/6/10/738354/595098.jpg',
@@ -26,15 +25,13 @@ var products=[
         img6:'https://media.laodong.vn/Storage/NewsPortal/2019/6/10/738354/595098.jpg',
         priceCurrent:2000000,
         bidIncrement:10000,
-        buynow: 3000000,
         description:'Siêu xe duy nhất trên thế giới không có chiếc thứ 2',
         timeEnd:{
             day:10,
             hour:3,
             min:25,
             second:44
-        },
-        ID_category:1
+        }
     },
     {ID:1,
         item:1,
@@ -47,21 +44,19 @@ var products=[
         img6:'https://tuvanmuaxe.vn/upload/upload_img/images/Hyundai-Sonata-2018-chi-tiet-tuvanmuaxe_vn-6.jpg',
         priceCurrent:50000,
         bidIncrement:2000,
-        buynow:400000,
         description:'Xe Huyndai Sonata 2018 New : Dòng xe hot nhất trên thị trường hiện nay',
         timeEnd:{
             day:10,
             hour:3,
             min:25,
             second:44
-        },
-        ID_category: 1
+        }
     },
 ];
 app.get('/productDetail',function (req,res){
     res.render('Products_Detail',{
 
-        product :products[0]
+        product: products[0]
     });
 });
 app.get('/productDetail/:ID',function (req,res){
