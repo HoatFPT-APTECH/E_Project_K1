@@ -1,4 +1,18 @@
-
+// fixed header
+var he=document.getElementById('header-bottom');
+function onScroll() {
+    window.addEventListener("scroll", callbackFunc);
+    function callbackFunc() {
+        var y = window.scrollY;
+        if (y > 150) {
+            he.classList.add("scroll");
+        } else {
+            he.classList.remove("scroll");
+        }
+    }
+};
+onScroll();
+// start slide
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -31,7 +45,7 @@ function showSlides(n) {
 }
 //time down
 var t=document.getElementById("time")
-var d=2,h=23,m=55,s=22;
+var d=2,h=15,m=55,s=22;
 var timeout=setInterval(counDown,1000)
 function counDown(){
     t.innerHTML=(d+'D:'+h+'H:'+m+'M:'+s+'S')
@@ -41,11 +55,11 @@ function counDown(){
         s=60
     }else if (m<0){
         h--;
-        m=60
+        m=60;
     }
     else if(h<0){
         d--;
-        h=24
+        h=24;
     }
     else if(d<0||d==null||h==null||m==null||s==null) {
         clearImmediate(timeout)
@@ -76,12 +90,44 @@ function activeD2(){
 }
 var active3=document.getElementById('counter3');//number2
 var active3s=setInterval(activeD3,30)
-var h=0;
+var h1=0;
 function activeD3(){
-    active3.innerHTML=h;
-    h++;
-    if (h==90){
+    active3.innerHTML=h1;
+    h1++;
+    if (h1==90){
         clearInterval(active3s)
     }
 }
+// hien thi thong tin
+function show(a){
+    var des=document.getElementById('discription');
+    var deli=document.getElementById('Delivery-options');
+    var bid=document.getElementById('bid-history');
+    var que=document.getElementById('question');
+    if(a==1){
+        deli.style.display='none';
+        bid.style.display='none';
+        que.style.display='none';
+        des.style.display='block';
+    }
+    else if (a==2){
+        deli.style.display='block';
+        bid.style.display='none';
+        que.style.display='none';
+        des.style.display='none';
+    }
+    else if (a==3){
+        deli.style.display='none';
+        bid.style.display='block';
+        que.style.display='none';
+        des.style.display='none';
+    }
+    else if (a==4){
+        deli.style.display='none';
+        bid.style.display='none';
+        que.style.display='block';
+        des.style.display='none';
+    }
+}
+
 
