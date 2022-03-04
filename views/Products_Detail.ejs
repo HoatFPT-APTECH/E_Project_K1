@@ -173,7 +173,7 @@
                  <h1><%= product.nameProduct %></h1>
                  <ul style="color: dimgray">
                      <li><h6> Listing ID:<%= product.ID%> |</h6></li>
-                     <li><h6> Item #: <%= product.item %></h6></li>
+                     <li><h6> Item #: <%=product.ID_category%></h6></li>
                  </ul>
              </div>
              <div class="price">
@@ -203,7 +203,7 @@
              </div>
              <div class="buy-now-area">
                  <form method="get" action="#">
-                     <button type="submit" class="button-submit">BUY NOW:$4,200</button>
+                     <button type="submit" class="button-submit">BUY NOW:$<%=product.buynow%></button>
                  </form>
                  <a href="#">
                  <div class="add-wishlist">
