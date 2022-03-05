@@ -2234,6 +2234,7 @@ header {
         -webkit-transition: all ease 0.3s;
         -o-transition: all ease 0.3s;
         transition: all ease 0.3s;
+        border-radius: 20px;
     }
 
     .menu li .submenu li a {
@@ -2405,7 +2406,13 @@ header {
     -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
-
+.scroll{
+    position: fixed;
+    top: 0px;
+    background-color: #5a4bcc;
+    transition: 1s;
+    width: 100%;
+}
 .header-bottom.active {
     background: #693ff5;
     position: fixed;

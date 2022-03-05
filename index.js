@@ -74,6 +74,9 @@ app.get('/homeTest',function (req,res){
 app.get('/contact_Us',function (req,res){
     res.render('contact_Us');
 });
+app.get('/auction',function (req,res){
+    res.render('product');
+});
 app.get('/Sign_In',function (req,res){
     res.render('Sign_In');
 });
