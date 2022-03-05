@@ -5,9 +5,19 @@
     <title>product_detail</title>
     <base href="/"/>
     <link rel="stylesheet" href="assets/css/Products_Detail.css">
-    <%-include("head.ejs")%>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/owl.min.css"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
 <body>
+
   <header class=" section">
       <div class=" header-top">
           <div class="container" style="display: flex;justify-content: space-between">
@@ -57,39 +67,39 @@
                    <a href="#" >Auction</a>
                </li>
                <li >
-                   <a href="#"  class="add page-item">Page</a>
+                   <a href="#"  class="add page-item" style="padding-bottom: 50px;padding-top: 50px">Page</a>
                     <ul class="sub-menu">
                         <li class="add">
-                            <a href="#" style="color: black; font-weight: 500">Product</a>
+                            <a href="#" >Product</a>
                         </li>
                         <li class="add">
-                            <a href="#" style="color: black;font-weight: 500">My Account</a>
+                            <a href="#" style="font-weight: 500">My Account</a>
                             <ul class="sub-menu-2">
-                                <li><a href="#"  style="color: black;font-weight: 500">Sign In</a> </li>
-                                <li><a href="#"  style="color: black;font-weight: 500">Sign UP</a> </li>
+                                <li><a href="#"  >Sign In</a> </li>
+                                <li><a href="#"  style=" padding-bottom: 20px">Sign UP</a> </li>
                             </ul>
                         </li>
                         <li class="add">
-                            <a href="#" style="color: black;font-weight: 500">Dash board</a>
+                            <a href="#" >Dash board</a>
                             <ul class="sub-menu-2">
-                                <li><a href="#"  style="color: black;font-weight: 500">Dash board</a> </li>
-                                <li><a href="#"  style="color: black;font-weight: 500">Personal Profile</a> </li>
-                                <li><a href="#"  style="color: black;font-weight: 500">My Bids</a> </li>
-                                <li><a href="#"  style="color: black;font-weight: 500">Winning Bids</a> </li>
-                                <li><a href="#"  style="color: black;font-weight: 500">My Alert</a> </li>
-                                <li><a href="#"  style="color: black;font-weight: 500">My Favorites</a> </li>
+                                <li><a href="#"  >Dash board</a> </li>
+                                <li><a href="#" >Personal Profile</a> </li>
+                                <li><a href="#" >My Bids</a> </li>
+                                <li><a href="#">Winning Bids</a> </li>
+                                <li><a href="#"  >My Alert</a> </li>
+                                <li><a href="#"  style=" padding-bottom: 20px">My Favorites</a> </li>
                             </ul>
                         </li>
                         <li >
-                            <a href="#" style="color: black;font-weight: 500; border-bottom: none">About Us</a>
+                            <a href="#" style=" border-bottom: none;padding-bottom: 20px">About Us</a>
                         </li>
                     </ul>
                </li>
                <li ><a href="#">Contact</a> </li>
            </ul>
               <form action="#" method="get" class="form-search">
-                  <input type="search" name="search" placeholder="Search product on here"  class="btt-search" />
-                  <button type="submit" class="btn btn-group submit" style="color: white;height:40px;width: 40px;border-radius: 50% " ><i class="fas fa-search"></i></button>
+                  <input type="search" name="search" placeholder="Search for branch,model..."  class="btt-search" />
+                  <button type="submit" class="btn btn-group submit" style="color: lightgray;height:40px;width: 40px;border-radius: 50%" ><i class="fas fa-search"></i></button>
               </form>
           </div>
           </div>
