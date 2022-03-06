@@ -53,18 +53,36 @@ var products=[
         }
     },
 ];
+var mssql = require("msnodesqlv8");
 
+var config = {
+    server: "DESKTOP-FN74G6P\\SQLEXPRESS",
+    database:"HoatDataBase",
+    port: 1433,
+    driver: "msnodesqlv8",
+    options: {
+        trustedConnection: true,
+    },
+}
+mssql.connect(config,function (err){
+    if (err) console.log(err)
+    else console.log('Connected to SQL Serve')
+})
 app.get('/productDetail',function (req,res){
+    var timeEnd='2022-3-27 15:23:46';
     res.render('Products_Detail',{
-
-        product: products[0]
+        product: products[0],
+        timeEnd: timeEnd
     });
 });
 app.get('/productDetail/:ID',function (req,res){
     console.log(req.params.ID);
     var i= parseInt(req.params.ID);
+    var timeEnd='2022-3-27 15:23:46';
     res.render('Products_Detail',{
-        product : products[i]
+        product : products[i],
+        timeEnd: timeEnd
+
     });
 });
 app.get('/homeTest',function (req,res){
@@ -95,4 +113,10 @@ app.get('/MyBids',function (req,res){
 });
 app.get('/Winning-Bid',function (req,res){
     res.render('Winning-Bid');
+});
+app.get('/timeCoundown',function (req,res){
+    var end_time='20239-2-27 15:23:46';
+    res.render('timeCoundown',{
+        endTime: end_time
+    });
 });

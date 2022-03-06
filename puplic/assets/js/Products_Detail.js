@@ -43,30 +43,6 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
 }
-//time down
-var t=document.getElementById("time")
-var d=2,h=15,m=55,s=22;
-var timeout=setInterval(counDown,1000)
-function counDown(){
-    t.innerHTML=(d+'D:'+h+'H:'+m+'M:'+s+'S')
-    s--;
-    if(s<0){
-        m--;
-        s=60
-    }else if (m<0){
-        h--;
-        m=60;
-    }
-    else if(h<0){
-        d--;
-        h=24;
-    }
-    else if(d<0||d==null||h==null||m==null||s==null) {
-        clearImmediate(timeout)
-        t.innerHTML="Time Ended";
-    }
-}
-//end timedown
 //start number change
 var active=document.getElementById('counter1');//number1
 var actives=setInterval(activeD,30)
@@ -128,6 +104,7 @@ function show(a){
         que.style.display='block';
         des.style.display='none';
     }
-}
+};
+
 
 
