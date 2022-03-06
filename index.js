@@ -53,21 +53,6 @@ var products=[
         }
     },
 ];
-var mssql = require("msnodesqlv8");
-
-var config = {
-    server: "DESKTOP-FN74G6P\\SQLEXPRESS",
-    database:"HoatDataBase",
-    port: 1433,
-    driver: "msnodesqlv8",
-    options: {
-        trustedConnection: true,
-    },
-}
-mssql.connect(config,function (err){
-    if (err) console.log(err)
-    else console.log('Connected to SQL Serve')
-})
 app.get('/productDetail',function (req,res){
     var timeEnd='2022-3-27 15:23:46';
     res.render('Products_Detail',{

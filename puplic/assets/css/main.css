@@ -6174,7 +6174,7 @@ div[class*="auction"] .custom-button {
 }
 
 .account-wrapper .right-side {
-    background: -ms-linear-gradient(90deg, #5140fe 0%, #7757f7 56%, #9d6ef0 100%);
+    background: linear-gradient(90deg, #5140fe 0%, #7757f7 56%, #9d6ef0 100%);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
