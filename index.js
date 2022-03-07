@@ -77,23 +77,6 @@ var products=[
     },
 ];
 //mssql
-var  sql=require('mssql');
-const config={
-    server:"HoatDataBase.mssql.somee.com",
-    user:"dijkailo_SQLLogin_1",
-    password:"uisxjs2b5z",
-    database:"HoatDataBase",
-    stream:false,
-    port:1433,
-    options:{
-        encrypt: true,
-        trustServerCertificate:true,
-    }
-};
-sql.connect(config,function (err){
-    if (err) console.log(err)
-    else console.log('Connected to SQL Server')
-})
 app.get('/productDetail',function (req,res){
     var timeEnd='2022-3-27 15:23:46';
     res.render('Products_Detail',{
