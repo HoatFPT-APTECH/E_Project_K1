@@ -36,12 +36,6 @@ app.get('/MyBids',function (req,res){
 app.get('/Winning-Bid',function (req,res){
     res.render('Winning-Bid');
 });
-app.get('/timeCoundown',function (req,res){
-    var end_time='20239-2-27 15:23:46';
-    res.render('timeCoundown',{
-        endTime: end_time
-    });
-});
 var products=[
     {ID:0,
         item:0,
