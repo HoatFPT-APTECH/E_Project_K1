@@ -6091,7 +6091,7 @@ div[class*="auction"] .custom-button {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: -ms-linear-gradient(166deg, #f22876 0%, #942dd9 100%);
+    background:linear-gradient(166deg, #f22876 0%, #942dd9 100%);
     -webkit-box-shadow: 0px 3px 5px 0px rgba(162, 44, 202, 0.3);
     box-shadow: 0px 3px 5px 0px rgba(162, 44, 202, 0.3);
     color: #ffffff;
