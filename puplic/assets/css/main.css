@@ -2558,7 +2558,7 @@ header {
 
 .browse-item:hover, .browse-item.active {
     color: #ffffff;
-    background: -ms-linear-gradient(88deg, #432eb9 4%, #6e48d3 58%, #9961ec 100%);
+    background:linear-gradient(88deg, #432eb9 4%, #6e48d3 58%, #9961ec 100%);
 }
 
 .browse-slider-section {
@@ -8372,7 +8372,7 @@ div[class*="auction"] .custom-button {
 }
 
 .custom-button.yellow {
-    background: -ms-linear-gradient(92deg, #ff8359 0%, #ffdf40 100%);
+    background: linear-gradient(92deg, #ff8359 0%, #ffdf40 100%);
     -webkit-box-shadow: 0px 19px 56px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 19px 56px 0px rgba(0, 0, 0, 0.2);
 }
