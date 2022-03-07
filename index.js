@@ -9,9 +9,38 @@ app.use(express.static('puplic'));
 app.set('view engine','ejs');
 app.set('views','./views');
 app.get('/',function (req,res){
-    res.render('homeTest',{
+    res.render('home',{
         products:products
     })
+});app.get('/contact_Us',function (req,res){
+    res.render('contact_Us');
+});
+app.get('/auction',function (req,res){
+    res.render('auction');
+});
+app.get('/Sign_In',function (req,res){
+    res.render('Sign_In');
+});
+app.get('/Sign_Up',function (req,res){
+    res.render('Sign_Up');
+});
+app.get('/Dashboard',function (req,res){
+    res.render('Dashboard');
+});
+app.get('/profile',function (req,res){
+    res.render('profile');
+});
+app.get('/MyBids',function (req,res){
+    res.render('MyBids');
+});
+app.get('/Winning-Bid',function (req,res){
+    res.render('Winning-Bid');
+});
+app.get('/timeCoundown',function (req,res){
+    var end_time='20239-2-27 15:23:46';
+    res.render('timeCoundown',{
+        endTime: end_time
+    });
 });
 var products=[
     {ID:0,
@@ -68,40 +97,5 @@ app.get('/productDetail/:ID',function (req,res){
         product : products[i],
         timeEnd: timeEnd
 
-    });
-});
-app.get('/homeTest',function (req,res){
-    res.render('homeTest',{
-        products:products
-    })
-})
-app.get('/contact_Us',function (req,res){
-    res.render('contact_Us');
-});
-app.get('/auction',function (req,res){
-    res.render('auction');
-});
-app.get('/Sign_In',function (req,res){
-    res.render('Sign_In');
-});
-app.get('/Sign_Up',function (req,res){
-    res.render('Sign_Up');
-});
-app.get('/Dashboard',function (req,res){
-    res.render('Dashboard');
-});
-app.get('/profile',function (req,res){
-    res.render('profile');
-});
-app.get('/MyBids',function (req,res){
-    res.render('MyBids');
-});
-app.get('/Winning-Bid',function (req,res){
-    res.render('Winning-Bid');
-});
-app.get('/timeCoundown',function (req,res){
-    var end_time='20239-2-27 15:23:46';
-    res.render('timeCoundown',{
-        endTime: end_time
     });
 });
