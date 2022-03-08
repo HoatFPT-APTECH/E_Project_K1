@@ -76,39 +76,6 @@ var products=[
         }
     },
 ];
-//mysql
-var mysql=require('mysql');
-const {request} = require("express");
-const config={
-    host:'remotemysql.com',
-    user:'XqPN07sBqS',
-    password:'69BMdT2EOc',
-    database:'XqPN07sBqS',
-    port:3306,
-    stream:false,
-    options: {
-        trustedConnection: true,
-        encrypt: true,
-        enableArithAbort: true,
-        trustServerCertificate: true,
-    }
-};
-var conn=mysql.createConnection(config);
-conn.connect(function (err){
-    if (err) console.log(err)
-    else console.log("Connected to DataBase")
-});
-var db= new request(conn);
-
-app.get('/productDetail',function (req,res){
-    var timeEnd='2022-3-27 15:23:46';
-    res.render('Products_Detail',{
-        product: products[0],
-        timeEnd: timeEnd
-    });
-});
-
-
 app.get('/productDetail',function (req,res){
     var timeEnd='2022-3-27 15:23:46';
     res.render('Products_Detail',{
@@ -126,3 +93,70 @@ app.get('/productDetail/:ID',function (req,res){
 
     });
 });
+//mysql
+var mysql=require('mysql');
+var db_config = {
+    host:'remotemysql.com',
+    user:'XqPN07sBqS',
+    password:'69BMdT2EOc',
+    database:'XqPN07sBqS',
+    port:3306,
+    stream:false,
+    options: {
+        trustedConnection: true,
+        encrypt: true,
+        enableArithAbort: true,
+        trustServerCertificate: true,
+    }
+};
+
+var conn;
+
+function handleDisconnect() {
+    conn = mysql.createConnection(db_config); // Recreate the connection, since
+                                                    // the old one cannot be reused.
+
+    conn.connect(function(err) {              // The server is either down
+        if(err) {                                     // or restarting (takes a while sometimes).
+            console.log('error when connecting to db:', err);
+            setTimeout(handleDisconnect, 2000); // We introduce a delay before attempting to reconnect,
+        }
+        else console.log('connected to database')// to avoid a hot loop, and to allow our node script to
+    });                                     // process asynchronous requests in the meantime.
+                                            // If you're also serving http, display a 503 error.
+    conn.on('error', function(err) {
+        console.log('db error', err);
+        if(err.code === 'PROTOCOL_CONNECTION_LOST') { // Connection to the MySQL server is usually
+            handleDisconnect();                         // lost due to either server restart, or a
+        } else {                                      // connnection idle timeout (the wait_timeout
+            throw err;                                  // server variable configures this)
+        }
+    });
+}
+
+handleDisconnect();
+//end connect to database
+app.get('/Vehicle',function (req,res){
+    var sql1="select  * from Nhom2_Products\n" +
+        "inner join Nhom2_Category on Nhom2_Products.ID_Category=Nhom2_Category.ID\n" +
+        "where nameCategory like 'Vehicles'order by timeEnd asc\n" +
+        "limit 3;";
+    var product_top3;
+    conn.query(sql1,function (err,rs){
+        if(err) console.log(err)
+        else
+             product_top3=rs;
+    });
+
+    var sql2="select  * from Nhom2_Products\n" +
+        "inner join Nhom2_Category on Nhom2_Products.ID_Category=Nhom2_Category.ID\n" +
+        "where nameCategory like 'Vehicles'";
+    conn.query(sql2,function (err,rs){
+        if(err) console.log(err)
+        else
+            res.render('Vehicle',{
+                product_bottom: rs,
+                product_top3: product_top3
+            })
+    });
+})
