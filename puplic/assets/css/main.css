@@ -174,8 +174,6 @@ textarea {
 .clearfix:after {
     clear: both;
 }
-
-
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -1464,13 +1462,10 @@ footer {
     padding: 15px;
 }
 
-@media (min-width: 576px) {
     .newslater-area {
         padding: 25px;
     }
-}
 
-@media (min-width: 992px) {
     .newslater-area {
         padding: 55px 45px 45px;
     }
@@ -1478,7 +1473,7 @@ footer {
     .newslater-area .newslater-content, .newslater-area .newslater-thumb {
         width: 50%;
     }
-}
+
 
 .subscribe-form {
     position: relative;
@@ -1499,17 +1494,6 @@ footer {
     top: 0;
 }
 
-@media (max-width: 575px) {
-    .subscribe-form input {
-        height: 50px;
-        padding: 0 20px;
-    }
-
-    .subscribe-form button {
-        position: relative;
-        margin-top: 20px;
-    }
-}
 
 .mb--60 {
     margin-bottom: -60px;
@@ -1541,11 +1525,10 @@ footer {
     font-weight: 400;
 }
 
-@media (max-width: 575px) {
     .footer-widget .links-list li a {
         font-size: 16px;
     }
-}
+
 
 .footer-widget .links-list li a i {
     margin-right: 35px;
@@ -1556,15 +1539,9 @@ footer {
         margin-right: 10px;
     }
 }
-
 .footer-widget .links-list li a:hover {
     color: #ee4730;
 }
-
-.copyright-area {
-    border-top: 1px solid rgba(255, 255, 255, 0.302);
-}
-
 .footer-bottom-wrapper {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -7964,7 +7941,7 @@ div[class*="auction"] .custom-button {
 
 .dash-bid-item .button-area li .custom-button.active {
     color: #ffffff;
-    background: -ms-linear-gradient(92deg, #ff8359 0%, #ffdf40 100%);
+    background:linear-gradient(92deg, #ff8359 0%, #ffdf40 100%);
 }
 
 .dash-bid-item .button-area .list li {
@@ -8054,11 +8031,6 @@ div[class*="auction"] .custom-button {
     margin-bottom: 19px;
 }
 
-@media (max-width: 575px) {
-    .alert-widget ul li label {
-        padding-left: 20px;
-    }
-}
 
 /*Refferral Section Starts Here*/
 .referral-form {
