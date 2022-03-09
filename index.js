@@ -76,29 +76,7 @@ var products=[
         }
     },
 ];
-//mysql
-var mysql=require('mysql');
-const {request} = require("express");
-const config={
-    host:'remotemysql.com',
-    user:'XqPN07sBqS',
-    password:'69BMdT2EOc',
-    database:'XqPN07sBqS',
-    port:3306,
-    stream:false,
-    options: {
-        trustedConnection: true,
-        encrypt: true,
-        enableArithAbort: true,
-        trustServerCertificate: true,
-    }
-};
-var conn=mysql.createConnection(config);
-conn.connect(function (err){
-    if (err) console.log(err)
-    else console.log("Connected to DataBase")
-});
-var db= new request(conn);
+
 
 app.get('/productDetail',function (req,res){
     var timeEnd='2022-3-27 15:23:46';
@@ -107,7 +85,6 @@ app.get('/productDetail',function (req,res){
         timeEnd: timeEnd
     });
 });
-
 
 app.get('/productDetail',function (req,res){
     var timeEnd='2022-3-27 15:23:46';
