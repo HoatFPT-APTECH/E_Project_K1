@@ -4624,15 +4624,6 @@ div[class*="auction"] .custom-button {
     justify-content: center;
     margin: -5px -15px 25px;
 }
-
-@media screen and (max-width: 425px) {
-    .auction-item-8 .auction-content .bid-count-area .item {
-        width: 100%;
-        max-width: 100%;
-        border: none;
-    }
-}
-
 /*Team Section Starts Here*/
 .team-item {
     max-width: 220px;
@@ -4723,15 +4714,11 @@ div[class*="auction"] .custom-button {
     font-size: 18px;
     text-transform: capitalize;
 }
-
-@media (min-width: 992px) {
     .overview-content {
         max-width: 585px;
         margin-left: auto;
         padding-left: 30px;
     }
-}
-
 /*Counter Section Starts Here*/
 .counter-item {
     text-align: center;
@@ -4790,13 +4777,9 @@ div[class*="auction"] .custom-button {
     padding: 0 15px 20px;
     text-align: center;
 }
-
-@media (min-width: 576px) {
     .about-content .item-area .item {
         max-width: 250px;
     }
-}
-
 .about-content .item-area .item .thumb {
     margin-bottom: 20px;
 }
@@ -4820,20 +4803,9 @@ div[class*="auction"] .custom-button {
     box-shadow: 0 0 15px rgba(44, 46, 69, 0.15);
     position: relative;
 }
-
-@media (max-width: 575px) {
-    .about-wrapper {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-@media (max-width: 991px) {
     .about-wrapper {
         padding-top: 50px;
     }
-}
-
 .about-thumb {
     position: absolute;
     right: 0;
@@ -4842,13 +4814,6 @@ div[class*="auction"] .custom-button {
     bottom: 50px;
     right: 30px;
 }
-
-@media (max-width: 991px) {
-    .about-thumb {
-        display: none;
-    }
-}
-
 .about-thumb img {
     width: unset !important;
     height: 100%;
@@ -4861,13 +4826,9 @@ div[class*="auction"] .custom-button {
 .mt--240 {
     margin-top: -240px;
 }
-
-@media (min-width: 992px) {
     .mt-lg--440 {
         margin-top: -440px;
     }
-}
-
 /*Account Section Starts Here*/
 .login-with {
     margin: -15px;
@@ -4968,14 +4929,9 @@ div[class*="auction"] .custom-button {
     border: 1px solid rgba(255, 255, 255, 0.3);
     font-weight: 400;
 }
-
-@media (max-width: 1199px) {
     .account-wrapper .left-side {
         padding-left: 30px;
     }
-}
-
-@media (max-width: 991px) {
     .account-wrapper .left-side, .account-wrapper .right-side {
         width: 100%;
     }
@@ -4983,21 +4939,11 @@ div[class*="auction"] .custom-button {
     .account-wrapper .right-side {
         border-radius: 0 0 10px 10px;
     }
-}
-
-@media (max-width: 575px) {
-    .account-wrapper .left-side, .account-wrapper .right-side {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
 .login-form .form-group {
     position: relative;
     font-size: 16px;
     text-align: center;
 }
-
 .login-form .form-group .pass-type {
     right: 30px;
     top: 50%;
@@ -5055,21 +5001,6 @@ div[class*="auction"] .custom-button {
     color: #171d1c;
     width: calc(100% - 14px);
 }
-
-@media (max-width: 575px) {
-    .login-form .form-group input {
-        padding: 0 30px 0 30px;
-    }
-
-    .login-form .form-group label {
-        left: 10px;
-    }
-
-    .login-form .form-group .pass-type {
-        right: 10px;
-    }
-}
-
 /*Contact Section Starts Here*/
 .contact-wrapper {
     position: relative;
@@ -5079,20 +5010,9 @@ div[class*="auction"] .custom-button {
     box-shadow: 0px 6px 18px 0px rgba(16, 5, 54, 0.17);
     padding-left: 40px;
 }
-
-@media (max-width: 991px) {
     .contact-wrapper {
         padding-right: 40px;
     }
-}
-
-@media (max-width: 575px) {
-    .contact-wrapper {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
 .contact-form .form-group {
     position: relative;
     margin-bottom: 30px;
@@ -5147,17 +5067,6 @@ div[class*="auction"] .custom-button {
     height: 50px;
     padding: 0 50px;
 }
-
-@media (max-width: 575px) {
-    .contact-form .form-group input {
-        padding: 0 0 0 40px;
-    }
-
-    .contact-form .form-group textarea {
-        padding: 5px 0 5px 40px;
-    }
-}
-
 /*Error Section Starts Here*/
 .error-section {
     min-height: 100vh;
@@ -5227,20 +5136,10 @@ div[class*="auction"] .custom-button {
 .faq-menu ul li a:hover::before, .faq-menu ul li a.active::before {
     opacity: 1;
 }
-
-@media (max-width: 575px) {
-    .faq-menu {
-        padding: 40px 30px;
-    }
-}
-
-@media (max-width: 991px) {
     .faq-menu {
         max-width: 400px;
         margin: 0 auto 30px;
     }
-}
-
 .faq-video {
     padding: 10px;
     background: #ffffff;
@@ -5249,14 +5148,10 @@ div[class*="auction"] .custom-button {
     -webkit-box-shadow: 0px 9px 43px 0px rgba(16, 5, 54, 0.27);
     box-shadow: 0px 9px 43px 0px rgba(16, 5, 54, 0.27);
 }
-
-@media (max-width: 991px) {
     .faq-video {
         max-width: 400px;
         margin: 0 auto;
     }
-}
-
 .faq-video .video-area {
     border-radius: 20px;
     position: relative;
@@ -5294,14 +5189,6 @@ div[class*="auction"] .custom-button {
     -ms-flex-align: center;
     align-items: center;
 }
-
-@media screen and (max-width: 400px) {
-    .video-button-2 {
-        width: 140px;
-        height: 140px;
-    }
-}
-
 .video-button-2 span {
     display: block;
     border-radius: 50%;
@@ -5417,13 +5304,6 @@ div[class*="auction"] .custom-button {
     max-width: 790px;
     margin: -20px auto 0;
 }
-
-@media (max-width: 767px) {
-    .faq-area .faq-wrapper {
-        padding: 0 15px;
-    }
-}
-
 .faq-area::before {
     position: absolute;
     content: "";
@@ -5543,52 +5423,12 @@ div[class*="auction"] .custom-button {
     -ms-transform: translate(-50%, -50%) rotate(90deg);
     transform: translate(-50%, -50%) rotate(90deg);
 }
-
-@media (max-width: 767px) {
     .faq-item {
         padding: 0 15px;
     }
-}
-
-@media screen and (max-width: 499px) {
-    .faq-item .faq-title {
-        padding-bottom: 10px;
-    }
-
-    .faq-item .faq-title .right-icon {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 14px;
-    }
-
-    .faq-item .faq-title .right-icon::after {
-        width: 15px;
-    }
-
-    .faq-item .faq-title .right-icon::before {
-        height: 15px;
-    }
-
-    .faq-item .faq-title .title {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 40px;
-        font-size: 18px;
-        font-weight: 500;
-    }
-
-    .faq-item .faq-title img {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) {
     .product-details .faq-item .faq-title {
         padding: 15px 0;
     }
-}
-
 .popular-article-item {
     padding: 30px 20px;
     border-radius: 20px;
@@ -5668,32 +5508,21 @@ div[class*="auction"] .custom-button {
     width: 7px;
     border-color: #171d1c;
 }
-
-@media (max-width: 991px) {
     .product-header > * {
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
         flex-grow: 1;
     }
-}
-
-@media (min-width: 992px) {
     .product-header.style-2 .product-search, .product-header.style-2 .product-header-item {
         width: calc((100% - 20px) / 3);
     }
-}
-
 .product-search {
     margin: 10px;
     position: relative;
 }
-
-@media (min-width: 992px) {
     .product-search {
         max-width: 240px;
     }
-}
-
 .product-search input {
     height: 100%;
     background: transparent;
@@ -5753,13 +5582,6 @@ div[class*="auction"] .custom-button {
     width: calc(100% - 100px);
     margin: 0 auto;
 }
-
-@media (max-width: 575px) {
-    .product-bottom-slider {
-        width: calc(100% - 90px);
-    }
-}
-
 .slide-bottom-item {
     margin: 20px;
     border-radius: 20px;
@@ -5767,15 +5589,6 @@ div[class*="auction"] .custom-button {
     box-shadow: 0px 0px 15px rgba(22, 26, 57, 0.36);
     cursor: pointer;
 }
-
-@media (max-width: 575px) {
-    .slide-bottom-item {
-        margin: 10px;
-        -webkit-box-shadow: 0px 0px 5px rgba(22, 26, 57, 0.36);
-        box-shadow: 0px 0px 5px rgba(22, 26, 57, 0.36);
-    }
-}
-
 .slide-bottom-item .slide-inner {
     border-radius: 20px;
     overflow: hidden;
@@ -5801,26 +5614,10 @@ div[class*="auction"] .custom-button {
 .slide-top-item .slide-inner img {
     width: 100%;
 }
-
-@media (max-width: 575px) {
-    .slide-top-item {
-        margin: 10px;
-        -webkit-box-shadow: 0px 0px 5px rgba(22, 26, 57, 0.36);
-        box-shadow: 0px 0px 5px rgba(22, 26, 57, 0.36);
-    }
-}
-
 .product-details-slider-top-wrapper {
     margin: -15px;
     margin-bottom: 0;
 }
-
-@media (max-width: 575px) {
-    .product-details-slider-top-wrapper {
-        margin: -10px;
-    }
-}
-
 .det-nav {
     width: 40px;
     height: 40px;
@@ -5849,13 +5646,9 @@ div[class*="auction"] .custom-button {
     margin-bottom: -10px;
     margin-top: 20px;
 }
-
-@media (min-width: 576px) {
     .product-details-slider-wrapper {
         margin-bottom: -20px;
     }
-}
-
 .det-prev {
     left: 0;
 }
