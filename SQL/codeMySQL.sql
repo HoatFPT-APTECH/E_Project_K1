@@ -1,5 +1,5 @@
 ﻿create table Nhom2_Category(
- ID int primary key,
+ ID_Category int primary key,
  nameCategory varchar(1000)
 );
 create table Nhom2_Products(
@@ -17,9 +17,9 @@ buyNow int ,
 description text,
 timeEnd datetime,
 ID_Category int,
- foreign key(ID_Category) references Nhom2_Category(ID)
+ foreign key(ID_Category) references Nhom2_Category(ID_Category)
 );
-insert into Nhom2_Category(ID,nameCategory) values
+insert into Nhom2_Category(ID_Category,nameCategory) values
 (1,N'Vehicles'),
 (2,N'Jewelry'),
 (3,N'Watches'),
