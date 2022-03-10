@@ -109,6 +109,9 @@ handleDisconnect();
         app.get('/Winning-Bid',function (req,res){
             res.render('Winning-Bid');
         });
+        app.get('/aboutus',function (req,res){
+            res.render('aboutUs');
+        });
 
         app.get('/Vehicle',function (req,res){
 
