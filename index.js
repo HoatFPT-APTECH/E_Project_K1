@@ -1,9 +1,9 @@
 const  express=require('express');
 const app=express();
-const port= process.env.PORT || 8080;
+const port= process.env.PORT || 1402;
 
 app.listen(port,function (err){
-    console.log('Serve is running. To check please access browser on : localhost:8080')
+    console.log('Serve is running. To check please access browser on : localhost:1402')
 });
 
 app.use(express.static('puplic'));
