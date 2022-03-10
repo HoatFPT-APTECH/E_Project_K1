@@ -80,7 +80,8 @@ handleDisconnect();
                     res.render('Products_Detail',{
                         product : product,
                         timeEnd: timeEnd
-                    });}
+                    });
+                    }
             })
         });
 
@@ -143,15 +144,10 @@ handleDisconnect();
             conn.query(sql1,function (err,rs){
                 if(err) console.log(err)
                 else
-                    res.render('showCategory',{
-                        product_bottom: rs,
-                        product_top3: product_top3
-                    })
+                    product_top3=rs
             });
 
             var sql2="select  * from Nhom2_Products\n" +
-                "inner join Nhom2_Category on Nhom2_Products.ID_Category=Nhom2_Category.ID\n" +
-                "where nameCategory like 'Vehicles'";
             "inner join Nhom2_Category on Nhom2_Products.ID_Category=Nhom2_Category.ID_Category\n" +
             "where nameCategory like 'Jewelry'";
             conn.query(sql2,function (err,rs){
@@ -236,7 +232,7 @@ handleDisconnect();
                         })
                     });
             })
-            app.get('/Electronics',function (req,res){
+        app.get('/Electronics',function (req,res){
                 let sql1="select  * from Nhom2_Products\n" +
                     "inner join Nhom2_Category on Nhom2_Products.ID_Category=Nhom2_Category.ID_Category\n" +
                     "where nameCategory like 'Electronics'order by timeEnd asc\n" +
@@ -260,3 +256,14 @@ handleDisconnect();
                         })
                 });
             })
+        app.get('/SearchResults',function (req,res){
+            var params= req.query.search;
+            let sql2="SELECT * FROM `Nhom2_Products` WHERE nameProduct LIKE '%"+params+"%'"
+            conn.query(sql2,function (err,rs){
+                if(err) console.log(err)
+                else
+                    res.render('SearchResults',{
+                        product_top3: rs,
+                    })
+            });
+        })

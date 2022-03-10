@@ -114,7 +114,7 @@
                     // If the count down is over, write some text
                     if (distance[<%-JSON.stringify(product_top3[i].ID)%>] < 0) {
                         clearInterval(x[<%-JSON.stringify(product_top3[i].ID)%>]);
-                        document.getElementById("bid_<%-JSON.stringify(product_top3[i].ID)%>counter").innerHTML = "EXPIRED";
+                        document.getElementById("bid_<%-JSON.stringify(product_top3[i].ID)%>counter").innerHTML = "AUCTION ENDED";
                     }
                 }, 1000);
                 //end timedown
@@ -156,17 +156,20 @@
             </form>
         </div>
         <div class="row mb-30-none justify-content-start">
-            <%for(var k=0;k< product_bottom.length;k++){ %>
+            <script type="text/javascript">
+                var tEnd2=[],counDownDate2=[],ID2=[],x2=[],now2=[],distance2=[],days2=[],hours2=[],minutes2=[],seconds2=[];
+            </script>
+            <%for(var i=0;i< product_bottom.length;i++){ %>
                 <div class="col-sm-10 col-md-6 col-lg-4" style="margin-bottom: 50px">
                     <div class="auction-item-2">
                         <div class="auction-thumb">
-                            <a href="/productDetail/<%=product_bottom[k].ID%>"><img src="<%=product_bottom[k].img1%>" alt="product"></a>
-                            <a href="/productDetail/<%=product_bottom[k].ID%>" class="rating"><i class="far fa-star"></i></a>
-                            <a href="/productDetail/<%=product_bottom[k].ID%>" class="bid"><i class="flaticon-auction"></i></a>
+                            <a href="/productDetail/<%=product_bottom[i].ID%>"><img src="<%=product_bottom[i].img1%>" alt="product"></a>
+                            <a href="/productDetail/<%=product_bottom[i].ID%>" class="rating"><i class="far fa-star"></i></a>
+                            <a href="/productDetail/<%=product_bottom[i].ID%>" class="bid"><i class="flaticon-auction"></i></a>
                         </div>
                         <div class="auction-content">
                             <h6 class="title">
-                                <a href="/productDetail/<%=product_bottom[k].ID%>"> <%=product_bottom[k].nameProduct%></a>
+                                <a href="/productDetail/<%=product_bottom[i].ID%>"> <%=product_bottom[i].nameProduct%></a>
                             </h6>
                             <div class="bid-area">
                                 <div class="bid-amount">
@@ -175,7 +178,7 @@
                                     </div>
                                     <div class="amount-content">
                                         <div class="current">Current Bid</div>
-                                        <div class="amount">$<%=product_bottom[k].priceCurrent%></div>
+                                        <div class="amount">$<%=product_bottom[i].priceCurrent%></div>
                                     </div>
                                 </div>
                                 <div class="bid-amount">
@@ -184,13 +187,13 @@
                                     </div>
                                     <div class="amount-content">
                                         <div class="current">Buy Now</div>
-                                        <div class="amount">$<%=product_bottom[k].buyNow%></div>
+                                        <div class="amount">$<%=product_bottom[i].buyNow%></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="countdown-area">
                                 <div class="countdown">
-                                    <div id="bid_counter1"></div>
+                                    <div id="bid_<%=product_bottom[i].ID%>counter2"></div>
                                 </div>
                                 <span class="total-bids">30 Bids</span>
                             </div>
@@ -200,6 +203,36 @@
                         </div>
                     </div>
                 </div>
+            <script type="text/javascript">
+                //time down
+                // Set the date we're counting down to
+                tEnd2[<%-JSON.stringify(product_bottom[i].ID)%>] = <%- JSON.stringify(product_bottom[i].timeEnd)%> ;
+                counDownDate2[<%-JSON.stringify(product_bottom[i].ID)%>] = new Date(tEnd2[ <%-JSON.stringify(product_bottom[i].ID)%> ]).getTime();
+
+                // Update the count down every 1 second
+                x2[<%-JSON.stringify(product_bottom[i].ID)%>] = setInterval(function() {
+
+                    // Get today's date and time
+                    now2[<%-JSON.stringify(product_bottom[i].ID)%>] = new Date().getTime();
+                    // Find the distance between now and the count down date
+                    distance2[<%-JSON.stringify(product_bottom[i].ID)%>] = counDownDate2[<%-JSON.stringify(product_bottom[i].ID)%>] - now2[<%-JSON.stringify(product_bottom[i].ID)%>];
+                    // Time calculations for days, hours, minutes and seconds
+                    days2[<%-JSON.stringify(product_bottom[i].ID)%>] = Math.floor(distance2[<%-JSON.stringify(product_bottom[i].ID)%>] / (1000 * 60 * 60 * 24));
+                    hours2[<%-JSON.stringify(product_bottom[i].ID)%>] = Math.floor((distance2[<%-JSON.stringify(product_bottom[i].ID)%>] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    minutes2[<%-JSON.stringify(product_bottom[i].ID)%>] = Math.floor((distance2[<%-JSON.stringify(product_bottom[i].ID)%>] % (1000 * 60 * 60)) / (1000 * 60));
+                    seconds2[<%-JSON.stringify(product_bottom[i].ID)%>] = Math.floor((distance2[<%-JSON.stringify(product_bottom[i].ID)%>] % (1000 * 60)) / 1000);
+                    // Output the result in an element with id="demo"
+                    document.getElementById("bid_<%-JSON.stringify(product_bottom[i].ID)%>counter2").innerHTML = days2[<%-JSON.stringify(product_bottom[i].ID)%>] + "d :" + hours2[<%-JSON.stringify(product_bottom[i].ID)%>] + "h : "
+                        + minutes2[<%-JSON.stringify(product_bottom[i].ID)%>] + " m :" + seconds2[<%-JSON.stringify(product_bottom[i].ID)%>] + "s  ";
+
+                    // If the count down is over, write some text
+                    if (distance2[<%-JSON.stringify(product_bottom[i].ID)%>] < 0) {
+                        clearInterval(x[<%-JSON.stringify(product_bottom[i].ID)%>]);
+                        document.getElementById("bid_<%-JSON.stringify(product_bottom[i].ID)%>counter").innerHTML = "AUCTION ENDED";
+                    }
+                }, 1000);
+                //end timedown
+            </script>
             <%}%>
 
     </div>
