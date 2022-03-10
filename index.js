@@ -1,6 +1,6 @@
 const  express=require('express');
 const app=express();
-const port=8080;
+const port= process.env.PORT || 8080;
 
 app.listen(port,function (err){
     console.log('Serve is running. To check please access browser on : localhost:8080')
