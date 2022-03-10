@@ -14,10 +14,7 @@
     "express": "^4.17.3",
     "javascript": "^1.0.0",
     "jquery": "^3.6.0",
-    "msnodesqlv8": "^2.4.6",
-    "mssql": "^8.0.2",
-    "mysql": "^2.18.1",
-    "st-mssql-tools": "^1.0.4"
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "gulp-autoprefixer": "^8.0.0"
