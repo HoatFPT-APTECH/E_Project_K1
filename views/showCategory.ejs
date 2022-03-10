@@ -41,6 +41,9 @@
             <h3 class="title">Auction is about to end !</h3>
         </div>
         <div class="row justify-content-start mb-30-none">
+            <script type="text/javascript">
+                var tEnd=[],counDownDate=[],ID=[],x=[],now=[],distance=[],days=[],hours=[],minutes=[],seconds=[];
+            </script>
             <%for(var i=0;i<product_top3.length;i++){ %>
                 <div class="col-sm-10 col-md-6 col-lg-4 " id="<%=product_top3[i].ID%>" >
                     <div class="auction-item-2">
@@ -75,7 +78,7 @@
                             </div>
                             <div class="countdown-area">
                                 <div class="countdown">
-                                    <div id="bid_counter27">
+                                    <div id="bid_<%=product_top3[i].ID%>counter">
                                     </div>
                                 </div>
                                 <span class="total-bids">30 Bids</span>
@@ -86,6 +89,36 @@
                         </div>
                     </div>
                 </div>
+            <script type="text/javascript">
+                //time down
+                // Set the date we're counting down to
+                 tEnd[<%-JSON.stringify(product_top3[i].ID)%>] = <%- JSON.stringify(product_top3[i].timeEnd)%> ;
+                 counDownDate[<%-JSON.stringify(product_top3[i].ID)%>] = new Date(tEnd[ <%-JSON.stringify(product_top3[i].ID)%> ]).getTime();
+
+                // Update the count down every 1 second
+                 x[<%-JSON.stringify(product_top3[i].ID)%>] = setInterval(function() {
+
+                    // Get today's date and time
+                     now[<%-JSON.stringify(product_top3[i].ID)%>] = new Date().getTime();
+                    // Find the distance between now and the count down date
+                     distance[<%-JSON.stringify(product_top3[i].ID)%>] = counDownDate[<%-JSON.stringify(product_top3[i].ID)%>] - now[<%-JSON.stringify(product_top3[i].ID)%>];
+                    // Time calculations for days, hours, minutes and seconds
+                     days[<%-JSON.stringify(product_top3[i].ID)%>] = Math.floor(distance[<%-JSON.stringify(product_top3[i].ID)%>] / (1000 * 60 * 60 * 24));
+                     hours[<%-JSON.stringify(product_top3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(product_top3[i].ID)%>] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                     minutes[<%-JSON.stringify(product_top3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(product_top3[i].ID)%>] % (1000 * 60 * 60)) / (1000 * 60));
+                     seconds[<%-JSON.stringify(product_top3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(product_top3[i].ID)%>] % (1000 * 60)) / 1000);
+                    // Output the result in an element with id="demo"
+                    document.getElementById("bid_<%-JSON.stringify(product_top3[i].ID)%>counter").innerHTML = days[<%-JSON.stringify(product_top3[i].ID)%>] + "d :" + hours[<%-JSON.stringify(product_top3[i].ID)%>] + "h : "
+                        + minutes[<%-JSON.stringify(product_top3[i].ID)%>] + " m :" + seconds[<%-JSON.stringify(product_top3[i].ID)%>] + "s  ";
+
+                    // If the count down is over, write some text
+                    if (distance[<%-JSON.stringify(product_top3[i].ID)%>] < 0) {
+                        clearInterval(x[<%-JSON.stringify(product_top3[i].ID)%>]);
+                        document.getElementById("bid_<%-JSON.stringify(product_top3[i].ID)%>counter").innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+                //end timedown
+            </script>
             <%}%>
         </div>
     </div>

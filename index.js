@@ -55,9 +55,9 @@ handleDisconnect();
 
 
         app.get('/',function (req,res){
-            let sql4="SELECT * FROM Nhom2_Products" ;
+            let sql="SELECT * FROM Nhom2_Products" ;
             let products;
-            conn.query(sql4,function (err,rs){
+            conn.query(sql,function (err,rs){
                     if (err) console.log(err)
                     else {
                         products=rs;
