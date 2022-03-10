@@ -16,7 +16,8 @@
     "jquery": "^3.6.0",
     "msnodesqlv8": "^2.4.6",
     "mssql": "^8.0.2",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "st-mssql-tools": "^1.0.4"
   },
   "devDependencies": {
     "gulp-autoprefixer": "^8.0.0"
