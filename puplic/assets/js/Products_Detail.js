@@ -1,17 +1,4 @@
-// fixed header
-var he=document.getElementById('header-bottom');
-function onScroll() {
-    window.addEventListener("scroll", callbackFunc);
-    function callbackFunc() {
-        var y = window.scrollY;
-        if (y > 150) {
-            he.classList.add("scroll");
-        } else {
-            he.classList.remove("scroll");
-        }
-    }
-};
-onScroll();
+
 // start slide
 var slideIndex = 1;
 showSlides(slideIndex);

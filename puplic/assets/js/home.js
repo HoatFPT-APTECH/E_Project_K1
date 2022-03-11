@@ -26,4 +26,4 @@ function closeButton(){
     cart.classList.remove('active');
     cart_sidebar.classList.remove('active');
     overLay.classList.remove('active');
-}
+};
