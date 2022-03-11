@@ -92,6 +92,3 @@ function show(a){
         des.style.display='none';
     }
 };
-
-
-

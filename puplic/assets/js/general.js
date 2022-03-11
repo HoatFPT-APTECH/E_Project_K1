@@ -27,3 +27,11 @@ function closeButton(){
     cart_sidebar.classList.remove('active');
     overLay.classList.remove('active');
 };
+///
+var itemRemove=document.querySelectorAll('.remove-cart')
+itemRemove.forEach(function (btn,index){
+    btn.addEventListener('click',function (evn){
+      var itemRemove= this.parentElement.parentElement;
+       itemRemove.style.display='none'
+    })
+})
