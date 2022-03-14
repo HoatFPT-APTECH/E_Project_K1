@@ -618,7 +618,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
         };
         var products=[];
         var lcproducts=JSON.parse(window.localStorage.getItem('products'));
-        if (lcproducts==undefined){
+        if (lcproduct.length<=0){
             confirm('You have successfully purchased please check the cart');
             products.push(product);
             window.localStorage.setItem('products',JSON.stringify(products));

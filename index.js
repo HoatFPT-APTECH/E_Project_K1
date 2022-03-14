@@ -54,33 +54,33 @@ handleDisconnect();
 //end connect to database
 
 
-app.get('/',function (req,res) {
-    let sql = "SELECT * FROM Nhom2_Products";
-    let products;
-    conn.query(sql, function (err, rs) {
-            if (err) console.log(err)
-            else {
-                products = rs;
-            }
-        }
-    );
-    let sql_productTop3 = "select  * from Nhom2_Products\n" +
-        "inner join Nhom2_Category on Nhom2_Products.ID_Category=Nhom2_Category.ID_Category\n" +
-        "where nameCategory like 'Vehicles'order by timeEnd asc\n" +
-        "limit 3;";
-    conn.query(sql_productTop3, function (err, rs){
-        if (err)console.log(err)
-        else {
-            res.render('home',{
-                sql_productTop3:rs,
-                products:products
-            })
-        }
-    });
+        app.get('/',function (req,res) {
+            let sql = "SELECT * FROM Nhom2_Products";
+            let products;
+            conn.query(sql, function (err, rs) {
+                    if (err) console.log(err)
+                    else {
+                        products = rs;
+                    }
+                }
+            );
+            let sqlVehicle = "select  * from Nhom2_Products\n" +
+                "inner join Nhom2_Category on Nhom2_Products.ID_Category=Nhom2_Category.ID_Category\n" +
+                "where nameCategory like 'Vehicles'order by timeEnd asc\n" +
+                "limit 3;";
+            let productsVehicle ;
+            conn.query(sqlVehicle, function (err, rs){
+                if (err)console.log(err)
+                else {
+                    res.render('home',{
+                        sql_productTop3:rs,
+                        products:products
+                    })
+                }
+            });
 
-});
-
-app.get('/productDetail/:ID',function (req,res){
+        });
+        app.get('/productDetail/:ID',function (req,res){
             let id= parseInt(req.params.ID);
             let sql="select * from Nhom2_Products where ID="+id+"";
             let product,timeEnd;
@@ -100,7 +100,17 @@ app.get('/productDetail/:ID',function (req,res){
             res.render('contact_Us');
         });
         app.get('/auction',function (req,res){
-            res.render('auction');
+            let sql = "SELECT * FROM Nhom2_Products";
+            let products;
+            conn.query(sql, function (err, rs) {
+                    if (err) console.log(err)
+                    else {
+                        res.render('auction',{
+                            products:rs
+                        })
+                    }
+                }
+            );
         });
         app.get('/Sign_In',function (req,res){
             res.render('Sign_In');

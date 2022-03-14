@@ -35,6 +35,8 @@ itemRemove.forEach(function (btn,index){
        itemRemove.style.display='none'
     })
 });
+JSON.parse(window.localStorage.getItem('products'));
+
 //add to cart
   //products=[
 //  {

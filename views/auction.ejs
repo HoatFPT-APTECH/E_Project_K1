@@ -33,19 +33,20 @@
     <section class="featured-auction-section padding-bottom mt--240 mt-lg--440 pos-rel">
         <div class="container">
             <div class="section-header cl-white mw-100 left-style">
-                <h3 class="title">Bid on These Featured Auctions!</h3>
+                <h3 class="title">Hot procuts!</h3>
             </div>
             <div class="row justify-content-center mb-30-none">
                 <div class="col-sm-10 col-md-6 col-lg-4">
                     <div class="auction-item-2">
                         <div class="auction-thumb">
-                            <a href="product-details.html"><img src="assets/images/auction/car/auction-1.jpg" alt="car"></a>
+                            <a href="/productDetail/7"><img src="https://sencowebfiles.s3.ap-south-1.amazonaws.com/products/Ry30aLDuK7yoBYklAQA9aunyylMPg9ngGauLKU6E.jpeg" alt="car"></a>
                             <a href="#0" class="rating"><i class="far fa-star"></i></a>
                             <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
                         </div>
                         <div class="auction-content">
                             <h6 class="title">
-                                <a href="#0">2018 Hyundai Sonata</a>
+                                <a href="#0">
+                                    Ring with Clear Stone Accents</a>
                             </h6>
                             <div class="bid-area">
                                 <div class="bid-amount">
@@ -54,7 +55,7 @@
                                     </div>
                                     <div class="amount-content">
                                         <div class="current">Current Bid</div>
-                                        <div class="amount">$876.00</div>
+                                        <div class="amount">$16000</div>
                                     </div>
                                 </div>
                                 <div class="bid-amount">
@@ -63,13 +64,43 @@
                                     </div>
                                     <div class="amount-content">
                                         <div class="current">Buy Now</div>
-                                        <div class="amount">$5,00.00</div>
+                                        <div class="amount">$49000</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="countdown-area">
                                 <div class="countdown">
                                     <div id="bid_counter26"></div>
+                                    <script>
+                                        // Set the date we're counting down to
+                                        var countDownDate = new Date("2022-03-20 12:11:24").getTime();
+
+                                        // Update the count down every 1 second
+                                        var x = setInterval(function() {
+
+                                            // Get today's date and time
+                                            var now = new Date().getTime();
+
+                                            // Find the distance between now and the count down date
+                                            var distance = countDownDate - now;
+
+                                            // Time calculations for days, hours, minutes and seconds
+                                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                            // Display the result in the element with id="demo"
+                                            document.getElementById("bid_counter26").innerHTML = days + "d " + hours + "h "
+                                                + minutes + "m " + seconds + "s ";
+
+                                            // If the count down is finished, write some text
+                                            if (distance < 0) {
+                                                clearInterval(x);
+                                                document.getElementById("bid_counter26").innerHTML = "EXPIRED";
+                                            }
+                                        }, 1000);
+                                    </script>
                                 </div>
                                 <span class="total-bids">30 Bids</span>
                             </div>
