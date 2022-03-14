@@ -589,28 +589,58 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
     }, 1000);
     //end timedown
     var buynow=document.getElementById('buynow');
-    buynow.addEventListener("click",function (){
-        var Product_Id= <%-JSON.stringify(product.ID)%>;
-        var Product_img=  <%-JSON.stringify(product.img1)%>;
-        var Product_Name=<%-JSON.stringify(product.nameProduct)%>;
-        var Product_Price=<%-JSON.stringify(product.buyNow)%>;
-        addToCart(Product_Id,Product_img,Product_Name,Product_Price);
-    });
+    buynow.addEventListener("click",function (event){
+        {
+            var Product_Id = <%- JSON.stringify(product.ID) %>;
+            var Product_img =  <%- JSON.stringify(product.img1) %>;
+            var Product_Name =<%- JSON.stringify(product.nameProduct) %>;
+            var Product_Price =<%- JSON.stringify(product.buyNow) %>;
+            addToCart(Product_Id, Product_img, Product_Name, Product_Price);
+        }});
     function addToCart(id,img,name,price){
         var cart=document.querySelector('.cart-products');
         var creatdiv=document.createElement('div');
         var divContent=' <div class="single-product-item"> <div class="thumb"> <a href="#0"><img src="'+img+'" alt="shop"></a> </div> <div class="content"> <h4 class="title"><a href="#0">'+name+'</a></h4> <div class="price"><span class="pprice">$'+price+'</span> </div> <button class="remove-cart">Remove</button> </div> </div>'
         creatdiv.innerHTML=divContent;
         cart.append(creatdiv);
-        alert('You have successfully purchased please check the cart');
         var itemRemove=document.querySelectorAll('.remove-cart')
         itemRemove.forEach(function (btn,index){
             btn.addEventListener('click',function (evn){
                 var itemRemove= this.parentElement.parentElement;
                 itemRemove.style.display='none'
             })
-        })
+        });
+        var product= {
+            id:id,
+            img:img,
+            name:name,
+            price:price
+        };
+        var products=[];
+        var lcproducts=JSON.parse(window.localStorage.getItem('products'));
+        if (lcproducts==undefined){
+            confirm('You have successfully purchased please check the cart');
+            products.push(product);
+            window.localStorage.setItem('products',JSON.stringify(products));
+        }
+        else {
+            var products=lcproducts ;
+            console.log(products)
+            var c=products.find(function (a){
+               return  a.id=product.id
+            })
+            console.log(c)
+            if(c==product){
+                alert('You bought this item')
+            }
+            else{
+                confirm('You have successfully purchased please check the cart');
+                products.push(product);
+                window.localStorage.setItem('products',JSON.stringify(products))
+            }
+        }
     };
+    console.log(JSON.parse(window.localStorage.getItem('products')))
 </script>
 <script type="text/javascript" src="assets/js/Products_Detail.js"></script>
 <script type="text/javascript" src="assets/js/general.js"></script>

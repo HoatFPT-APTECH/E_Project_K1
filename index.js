@@ -3,7 +3,7 @@ const app=express();
 const port= process.env.PORT || 1402;
 
 app.listen(port,function (err){
-    console.log('Serve is running. To check please access browser on : localhost:1402')
+    console.log('Serve is running. To check please access browser on : localhost:1402');
 });
 
 app.use(express.static('puplic'));
@@ -261,7 +261,7 @@ handleDisconnect();
             })
         app.get('/SearchResults',function (req,res){
             var params= req.query.search;
-            let sql2="SELECT * FROM `Nhom2_Products` WHERE nameProduct LIKE '%"+params+"%'"
+            let sql2="SELECT * FROM `Nhom2_Products` WHERE nameProduct LIKE '%"+params+"%'";
             conn.query(sql2,function (err,rs){
                 if(err) console.log(err)
                 else
@@ -269,4 +269,5 @@ handleDisconnect();
                         product_top3: rs,
                     })
             });
-        })
+        });
+        //create localstorage for product

@@ -34,4 +34,14 @@ itemRemove.forEach(function (btn,index){
       var itemRemove= this.parentElement.parentElement;
        itemRemove.style.display='none'
     })
-})
+});
+//add to cart
+  //products=[
+//  {
+//             id:id,
+//             img:img,
+//             name:name,
+//             price:price
+//         };]
+
+
