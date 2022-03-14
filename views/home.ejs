@@ -130,16 +130,20 @@
                 <a href="#0" class="normal-button">View All</a>
             </div>
             <div class="row justify-content-center mb-30-none">
-                <div class="col-sm-10 col-md-6 col-lg-4">
+                <script type="text/javascript">
+                    var tEnd=[],counDownDate=[],ID=[],x=[],now=[],distance=[],days=[],hours=[],minutes=[],seconds=[];
+                </script>
+                <%for(var i=0;i<sql_productTop3.length;i++){ %>
+                <div class="col-sm-10 col-md-6 col-lg-4 " id="<%=sql_productTop3[i].ID%>" >
                     <div class="auction-item-2">
                         <div class="auction-thumb">
-                            <a href="/productDetail/<%= products[1].ID %>"><img src="https://anh.24h.com.vn/upload/1-2017/images/2017-03-09/1489042359-148904035627142-01.jpg" alt="car"></a>
-                            <a href="/productDetail/<%= products[1].ID %>" class="rating"><i class="far fa-star"></i></a>
-                            <a href="/productDetail/<%= products[1].ID %>" class="bid"><i class="flaticon-auction"></i></a>
+                            <a href="/productDetail/ <%= sql_productTop3[i].ID %> " ><img src="<%=sql_productTop3[i].img1%>" alt="car" ></a>
+                            <a href="/productDetail/ <%= sql_productTop3[i].ID %> " class="rating"><i class="far fa-star"></i></a>
+                            <a href="/productDetail/ <%= sql_productTop3[i].ID %> " class="bid"><i class="flaticon-auction"></i></a>
                         </div>
                         <div class="auction-content">
                             <h6 class="title">
-                                <a href="/productDetail/<%= products[1].ID %>">2018 Hyundai Sonata</a>
+                                <a href="#0"><%=sql_productTop3[i].nameProduct%></a>
                             </h6>
                             <div class="bid-area">
                                 <div class="bid-amount">
@@ -148,7 +152,7 @@
                                     </div>
                                     <div class="amount-content">
                                         <div class="current">Current Bid</div>
-                                        <div class="amount">$876.00</div>
+                                        <div class="amount"><%=sql_productTop3[i].priceCurrent%></div>
                                     </div>
                                 </div>
                                 <div class="bid-amount">
@@ -157,13 +161,14 @@
                                     </div>
                                     <div class="amount-content">
                                         <div class="current">Buy Now</div>
-                                        <div class="amount">$5,00.00</div>
+                                        <div class="amount">$<%= sql_productTop3[i].buyNow %></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="countdown-area">
                                 <div class="countdown">
-                                    <div id="bid_counter26">0d  : 10h  : 42m  : 13s</div>
+                                    <div id="bid_<%=sql_productTop3[i].ID%>counter">
+                                    </div>
                                 </div>
                                 <span class="total-bids">30 Bids</span>
                             </div>
@@ -173,92 +178,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-10 col-md-6 col-lg-4">
-                    <div class="auction-item-2">
-                        <div class="auction-thumb">
-                            <a href="/productDetail/<%= products[0].ID %>"><img src="https://media.laodong.vn/Storage/NewsPortal/2019/6/10/738354/595097.jpg" alt="car"></a>
-                            <a href="/productDetail/<%= products[0].ID %>" class="rating"><i class="far fa-star"></i></a>
-                            <a href="/productDetail/<%= products[0].ID %>" class="bid"><i class="flaticon-auction"></i></a>
-                        </div>
-                        <div class="auction-content">
-                            <h6 class="title">
-                                <a href="/productDetail/<%= products[0].ID %>">Lamboghini Raventador, S</a>
-                            </h6>
-                            <div class="bid-area">
-                                <div class="bid-amount">
-                                    <div class="icon">
-                                        <i class="flaticon-auction"></i>
-                                    </div>
-                                    <div class="amount-content">
-                                        <div class="current">Current Bid</div>
-                                        <div class="amount">$876.00</div>
-                                    </div>
-                                </div>
-                                <div class="bid-amount">
-                                    <div class="icon">
-                                        <i class="flaticon-money"></i>
-                                    </div>
-                                    <div class="amount-content">
-                                        <div class="current">Buy Now</div>
-                                        <div class="amount">$5,00.00</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="countdown-area">
-                                <div class="countdown">
-                                    <div id="bid_counter27">0d  : 10h  : 42m  : 13s</div>
-                                </div>
-                                <span class="total-bids">30 Bids</span>
-                            </div>
-                            <div class="text-center">
-                                <a href="#0" class="custom-button">Submit a bid</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-10 col-md-6 col-lg-4">
-                    <div class="auction-item-2">
-                        <div class="auction-thumb">
-                            <a href="./product-details.html"><img src="https://wieck-nissanao-production.s3.amazonaws.com/photos/66e0a384a30d5bca3feac17259a9236f2a1d7639/thumbnail-364x204.jpg" alt="car"></a>
-                            <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                            <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
-                        </div>
-                        <div class="auction-content">
-                            <h6 class="title">
-                                <a href="./product-details.html">2018 Nissan Rogue</a>
-                            </h6>
-                            <div class="bid-area">
-                                <div class="bid-amount">
-                                    <div class="icon">
-                                        <i class="flaticon-auction"></i>
-                                    </div>
-                                    <div class="amount-content">
-                                        <div class="current">Current Bid</div>
-                                        <div class="amount">$876.00</div>
-                                    </div>
-                                </div>
-                                <div class="bid-amount">
-                                    <div class="icon">
-                                        <i class="flaticon-money"></i>
-                                    </div>
-                                    <div class="amount-content">
-                                        <div class="current">Buy Now</div>
-                                        <div class="amount">$5,00.00</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="countdown-area">
-                                <div class="countdown">
-                                    <div id="bid_counter28">0d  : 10h  : 42m  : 13s</div>
-                                </div>
-                                <span class="total-bids">30 Bids</span>
-                            </div>
-                            <div class="text-center">
-                                <a href="#0" class="custom-button">Submit a bid</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <script type="text/javascript">
+                    //time down
+                    // Set the date we're counting down to
+                    tEnd[<%-JSON.stringify(sql_productTop3[i].ID)%>] = <%- JSON.stringify(sql_productTop3[i].timeEnd)%> ;
+                    counDownDate[<%-JSON.stringify(sql_productTop3[i].ID)%>] = new Date(tEnd[ <%-JSON.stringify(sql_productTop3[i].ID)%> ]).getTime();
+                    // Update the count down every 1 second
+                    x[<%-JSON.stringify(sql_productTop3[i].ID)%>] = setInterval(function() {
+                        // Get today's date and time
+                        now[<%-JSON.stringify(sql_productTop3[i].ID)%>] = new Date().getTime();
+                        // Find the distance between now and the count down date
+                        distance[<%-JSON.stringify(sql_productTop3[i].ID)%>] = counDownDate[<%-JSON.stringify(sql_productTop3[i].ID)%>] - now[<%-JSON.stringify(sql_productTop3[i].ID)%>];
+                        // Time calculations for days, hours, minutes and seconds
+                        days[<%-JSON.stringify(sql_productTop3[i].ID)%>] = Math.floor(distance[<%-JSON.stringify(sql_productTop3[i].ID)%>] / (1000 * 60 * 60 * 24));
+                        hours[<%-JSON.stringify(sql_productTop3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(sql_productTop3[i].ID)%>] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        minutes[<%-JSON.stringify(sql_productTop3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(sql_productTop3[i].ID)%>] % (1000 * 60 * 60)) / (1000 * 60));
+                        seconds[<%-JSON.stringify(sql_productTop3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(sql_productTop3[i].ID)%>] % (1000 * 60)) / 1000);
+                        // Output the result in an element with id="demo"
+                        document.getElementById("bid_<%-JSON.stringify(sql_productTop3[i].ID)%>counter").innerHTML = days[<%-JSON.stringify(sql_productTop3[i].ID)%>] + "d :" + hours[<%-JSON.stringify(sql_productTop3[i].ID)%>] + "h : "
+                            + minutes[<%-JSON.stringify(sql_productTop3[i].ID)%>] + " m :" + seconds[<%-JSON.stringify(sql_productTop3[i].ID)%>] + "s  ";
+                        // If the count down is over, write some text
+                        if (distance[<%-JSON.stringify(sql_productTop3[i].ID)%>] < 0) {
+                            clearInterval(x[<%-JSON.stringify(sql_productTop3[i].ID)%>]);
+                            document.getElementById("bid_<%-JSON.stringify(sql_productTop3[i].ID)%>counter").innerHTML = "AUCTION ENDED";
+                        }
+                    }, 1000);
+                    //end timedown
+                </script>
+                <%}%>
+
             </div>
         </div>
     </section>
