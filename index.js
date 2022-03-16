@@ -60,7 +60,7 @@ handleDisconnect();
             conn.query(sql, function (err, rs) {
                     if (err) console.log(err)
                     else {
-                        products = rs;
+                        products = rs;// rslaf  mot mang
                     }
                 }
             );
