@@ -598,30 +598,24 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
             addToCart(Product_Id, Product_img, Product_Name, Product_Price);
         }});
     function addToCart(id,img,name,price){
-        var cart=document.querySelector('.cart-products');
-        var creatdiv=document.createElement('div');
-        var divContent=' <div class="single-product-item"> <div class="thumb"> <a href="#0"><img src="'+img+'" alt="shop"></a> </div> <div class="content"> <h4 class="title"><a href="#0">'+name+'</a></h4> <div class="price"><span class="pprice">$'+price+'</span> </div> <button class="remove-cart">Remove</button> </div> </div>'
-        creatdiv.innerHTML=divContent;
-        cart.append(creatdiv);
-        var itemRemove=document.querySelectorAll('.remove-cart')
-        itemRemove.forEach(function (btn,index){
-            btn.addEventListener('click',function (evn){
-                var itemRemove= this.parentElement.parentElement;
-                itemRemove.style.display='none'
-            })
-        });
          let product= {
             id:id,
             img:img,
             name:name,
             price:price
         };
-        var products=[];
-        var lcproducts=JSON.parse(window.localStorage.getItem('products'));
+        let products=[];
+        let lcproducts=JSON.parse(window.localStorage.getItem('products'));
+        let cart=document.querySelector('.cart-products');
+        let creatdiv=document.createElement('div');
+
+        let divContent=' <div class="single-product-item"> <div class="thumb"> <a href="#0"><img src="'+img+'" alt="shop"></a> </div> <div class="content"> <h4 class="title"><a href="#0">'+name+'</a></h4> <div class="price"><span class="pprice">$'+price+'</span> </div> <button class="remove-cart">Remove</button> </div> </div>';
         if (lcproducts==undefined||lcproducts.length==0){
             confirm('You have successfully purchased please check the cart');
             products.push(product);
             window.localStorage.setItem('products',JSON.stringify(products));
+            creatdiv.innerHTML=divContent;
+            cart.append(creatdiv);
         }
         else if (lcproducts.length>0) {
              products=lcproducts ;
@@ -630,18 +624,31 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
 
             }
            if (products.some(check)){
-                 alert('you bouted this item')
+                 alert('you boughted this item')
              }
              else {
                  confirm('You have successfully purchased please check the cart');
                  products.push(product);
                  window.localStorage.setItem('products',JSON.stringify(products));
+               creatdiv.innerHTML=divContent;
+               cart.append(creatdiv);
              }
-        }
+        };
+        let amount=products.length;
+        document.querySelector('.amount').innerHTML=amount;
+        var itemRemove=document.querySelectorAll('.remove-cart');
+        itemRemove.forEach(function (btn,index){
+            btn.addEventListener('click',function (evn){
+                var itemRemove= evn.target.parentElement;
+                var nameRemove=itemRemove.querySelector('.content>.title>a').innerText;
+                removeItem(nameRemove)
+                itemRemove.parentElement.style.display='none';document.querySelector('.amount').innerHTML=JSON.parse(window.localStorage.getItem('products')).length
+            })
+        });
+
     };
 </script>
 <script type="text/javascript" src="assets/js/Products_Detail.js"></script>
-<script type="text/javascript" src="assets/js/general.js"></script>
 <script type="text/javascript " src="assets/js/jquery.js"></script>
 </body>
 </html>
