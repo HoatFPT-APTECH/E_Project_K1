@@ -38,12 +38,6 @@ itemRemove.forEach(function (btn,index){
 JSON.parse(window.localStorage.getItem('products'));
 
 //add to cart
-  //products=[
-//  {
-//             id:id,
-//             img:img,
-//             name:name,
-//             price:price
-//         };]
+ console.log(JSON.parse(window.localStorage.getItem('products')))
 
 

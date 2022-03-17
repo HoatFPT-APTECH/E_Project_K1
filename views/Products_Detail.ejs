@@ -610,7 +610,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                 itemRemove.style.display='none'
             })
         });
-        var product= {
+         let product= {
             id:id,
             img:img,
             name:name,
@@ -618,29 +618,27 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
         };
         var products=[];
         var lcproducts=JSON.parse(window.localStorage.getItem('products'));
-        if (lcproduct.length<=0){
+        if (lcproducts==undefined||lcproducts.length==0){
             confirm('You have successfully purchased please check the cart');
             products.push(product);
             window.localStorage.setItem('products',JSON.stringify(products));
         }
-        else {
-            var products=lcproducts ;
-            console.log(products)
-            var c=products.find(function (a){
-               return  a.id=product.id
-            })
-            console.log(c)
-            if(c==product){
-                alert('You bought this item')
+        else if (lcproducts.length>0) {
+             products=lcproducts ;
+            function check(c){
+                return c.id==product.id
+
             }
-            else{
-                confirm('You have successfully purchased please check the cart');
-                products.push(product);
-                window.localStorage.setItem('products',JSON.stringify(products))
-            }
+           if (products.some(check)){
+                 alert('you bouted this item')
+             }
+             else {
+                 confirm('You have successfully purchased please check the cart');
+                 products.push(product);
+                 window.localStorage.setItem('products',JSON.stringify(products));
+             }
         }
     };
-    console.log(JSON.parse(window.localStorage.getItem('products')))
 </script>
 <script type="text/javascript" src="assets/js/Products_Detail.js"></script>
 <script type="text/javascript" src="assets/js/general.js"></script>
