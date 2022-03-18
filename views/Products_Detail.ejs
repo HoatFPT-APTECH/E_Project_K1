@@ -18,7 +18,142 @@
     <link rel="stylesheet" href="assets/css/header.css">
 </head>
 <body>
-<%-include('header.ejs')%>
+
+<div class="overlay" id="overlay"></div>
+
+<header class="section">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-wrapper">
+                <ul class="customer-support">
+                    <li>
+                        <a href="#0" class="mr-3"><i class="fas fa-phone-alt"></i><span class="ml-2 d-none d-sm-inline-block">Customer Support</span></a>
+                    </li>
+                    <li>
+                        <i class="fas fa-globe"></i>
+                        <form action="#" method="get" style="display: inline">
+                            <select name="language" class="select-bar" style="color: white"  >
+                                <option value="en" style="color: black">English</option>
+                                <option value="Bn" style="color: black" > VietNam</option>
+                                <option value="Rs" style="color: black">China</option>
+
+                            </select>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="cart-button-area">
+                    <li>
+                        <button  style="background: none;border: none" class="cart-button" id="cart-button" onclick="openCart(this)" ><i class="flaticon-shopping-basket"></i><span class="amount">08</span></button>
+                    </li>
+                    <li>
+                        <a href="/Sign_In" class="user-button"><i class="flaticon-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom" id="header-bottom">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="/">
+                        <img src="./assets/images/logo/logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="menu ml-auto">
+                    <li >
+                        <a href="/">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="/auction">Auction</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Products</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/Vehicle">Vehicles</a>
+                            </li>
+                            <li>
+                                <a href="/Jewelry">Jewelry</a>
+                            </li>
+                            <li>
+                                <a href="/Watches">Watches</a>
+                            </li>
+                            <li>
+                                <a href="/Coin&Bullion">Coin & Bullion</a>
+                            </li>
+                            <li>
+                                <a href="/RealEstate">Real Estate</a>
+                            </li>
+                            <li>
+                                <a href="/Electronics" style="border: none">Electronics and Art</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">About us</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact us</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">My Account</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/Dashboard">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="/profile">Personal Profile</a>
+                            </li>
+                            <li>
+                                <a href="/MyBids">My Bids</a>
+                            </li>
+                            <li>
+                                <a href="/Winning-Bid" style="border: none">Winning Bids</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <form class="search-form" method="get" action="/SearchResults">
+                    <input type="text" placeholder="Search for brand, model...." name="search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="search-bar d-md-none">
+                    <a href="#0"><i class="fas fa-search"></i></a>
+                </div>
+                <div class="header-bar d-lg-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="cart-sidebar-area  " id="cart-sidebar-area">
+    <div class="top-content">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/logo/logo2.png" alt="logo">
+        </a>
+        <span class="side-sidebar-close-btn" onclick="closeButton(this)"><i class="fas fa-times" ></i></span>
+    </div>
+    <div class="bottom-content">
+        <div class="cart-products">
+            <h4 class="title">Shopping cart</h4>
+        </div>
+        <div class="btn-wrapper text-center">
+            <a href="#0" class="custom-button"><span>Checkout</span></a>
+        </div>
+    </div>
+</div>
   <!--end header by mai huy hoat -->
   <div class="hero"></div>
   <section class="section   " >
@@ -589,15 +724,16 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
     }, 1000);
     //end timedown
     var buynow=document.getElementById('buynow');
-    buynow.addEventListener("click",function (event){
+    buynow.addEventListener("click",function (event){ //get data products
         {
             var Product_Id = <%- JSON.stringify(product.ID) %>;
             var Product_img =  <%- JSON.stringify(product.img1) %>;
             var Product_Name =<%- JSON.stringify(product.nameProduct) %>;
             var Product_Price =<%- JSON.stringify(product.buyNow) %>;
             addToCart(Product_Id, Product_img, Product_Name, Product_Price);
+            location.reload();
         }});
-    function addToCart(id,img,name,price){
+    function addToCart(id,img,name,price){// send data prodcuts to localstorage
          let product= {
             id:id,
             img:img,
@@ -606,16 +742,10 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
         };
         let products=[];
         let lcproducts=JSON.parse(window.localStorage.getItem('products'));
-        let cart=document.querySelector('.cart-products');
-        let creatdiv=document.createElement('div');
-
-        let divContent=' <div class="single-product-item"> <div class="thumb"> <a href="#0"><img src="'+img+'" alt="shop"></a> </div> <div class="content"> <h4 class="title"><a href="#0">'+name+'</a></h4> <div class="price"><span class="pprice">$'+price+'</span> </div> <button class="remove-cart">Remove</button> </div> </div>';
         if (lcproducts==undefined||lcproducts.length==0){
             confirm('You have successfully purchased please check the cart');
             products.push(product);
             window.localStorage.setItem('products',JSON.stringify(products));
-            creatdiv.innerHTML=divContent;
-            cart.append(creatdiv);
         }
         else if (lcproducts.length>0) {
              products=lcproducts ;
@@ -630,25 +760,12 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                  confirm('You have successfully purchased please check the cart');
                  products.push(product);
                  window.localStorage.setItem('products',JSON.stringify(products));
-               creatdiv.innerHTML=divContent;
-               cart.append(creatdiv);
              }
         };
-        let amount=products.length;
-        document.querySelector('.amount').innerHTML=amount;
-        var itemRemove=document.querySelectorAll('.remove-cart');
-        itemRemove.forEach(function (btn,index){
-            btn.addEventListener('click',function (evn){
-                var itemRemove= evn.target.parentElement;
-                var nameRemove=itemRemove.querySelector('.content>.title>a').innerText;
-                removeItem(nameRemove)
-                itemRemove.parentElement.style.display='none';document.querySelector('.amount').innerHTML=JSON.parse(window.localStorage.getItem('products')).length
-            })
-        });
-
     };
 </script>
 <script type="text/javascript" src="assets/js/Products_Detail.js"></script>
+<script type="text/javascript" src="assets/js/general.js"></script>
 <script type="text/javascript " src="assets/js/jquery.js"></script>
 </body>
 </html>
