@@ -298,7 +298,6 @@ handleDisconnect();
             var sql2="SELECT * FROM `Nhom2_Products` WHERE nameProduct LIKE '%"+params+"%'";
            var sbn=req.query.sort_by_name;
             var lms=req.query.sort_by_show;
-            console.log(sbn,lms,params);
             if((sbn=='none'&&lms=='all')||(sbn===undefined&&lms===undefined)){
                 console.log(true);
             }
