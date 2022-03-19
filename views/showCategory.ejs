@@ -120,30 +120,33 @@
 <!--============= Product Auction Section Starts Here =============-->
 <div class="product-auction padding-bottom">
     <div class="container">
-        <div class="product-header mb-40">
-            <div class="product-header-item">
-                <div class="item">Sort By : </div>
-                <select name="sort-by" class="select-bar">
-                    <option value="all">All</option>
-                    <option value="name">Name</option>
-                    <option value="date">Date</option>
-                    <option value="type">Type</option>
-                    <option value="car">Car</option>
-                </select>
-            </div>
-            <div class="product-header-item">
-                <div class="item">Show : </div>
-                <select name="sort-by" class="select-bar">
-                    <option value="09">09</option>
-                    <option value="21">21</option>
-                    <option value="30">30</option>
-                    <option value="39">39</option>
-                    <option value="60">60</option>
-                </select>
-            </div>
-            <form class="product-search ml-auto">
-                <input type="text" placeholder="Item Name">
-                <button type="submit"><i class="fas fa-search"></i></button>
+            <form class="product-search ml-auto" style="width: 100%;" method="get" action="/SearchResults">
+                <div class="product-header mb-40">
+                    <div class="product-header-item">
+                        <div class="item">Sort By : </div>
+                        <select name="sort_by_name" class="select-bar">
+                            <option value="none">None</option>
+                            <option value="nameProduct">Name</option>
+                            <option value="timeEnd">Time</option>
+                            <option value="currentPrice">Price</option>
+                        </select>
+                    </div>
+                    <div class="product-header-item">
+                        <div class="item">Show : </div>
+                        <select name="sort_by_show" class="select-bar">
+                            <option value="all">all</option>
+                            <option value="3">3</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Item Name" name="search" >
+                        <button type="submit"><i class="fas fa-search"></i></button>
+
+                    </div>
+                </div>
             </form>
         </div>
         <div class="row mb-30-none justify-content-start">

@@ -5442,9 +5442,6 @@ div[class*="auction"] .custom-button {
     margin: 10px;
     position: relative;
 }
-.product-search {
-    max-width: 240px;
-}
 .product-search input {
     height: 100%;
     background: transparent;
@@ -5462,7 +5459,8 @@ div[class*="auction"] .custom-button {
     background: #ffffff;
     font-size: 14px;
     position: absolute;
-    right: 1px;
+    right: 17px;
+    top: 16px;
     bottom: 1px;
     border-radius: 19px;
     border: none;

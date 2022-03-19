@@ -88,12 +88,25 @@ handleDisconnect();
                 if (err) console.log(err)
                 else{ product=rs[0];
                     timeEnd=rs[0].timeEnd;
+                    var barGain= req.query.barGain;
+                    if (barGain>product.priceCurrent){
+                        var update="UPDATE Nhom2_Products\n" +
+                            "SET priceCurrent="+barGain+"\n" +
+                        "WHERE ID="+id+"";
+                        conn.query(update,function (err,rs){
+                            if (err) console.log(err)
+                            else {
+                                console.log('update successfully');
+                                product.currentPrice=barGain;
+                            }
+                        })
+                    }
                     res.render('Products_Detail',{
                         product : product,
                         timeEnd: timeEnd
                     });
                     }
-            })
+            });
         });
 
         app.get('/contact_Us',function (req,res){
@@ -282,7 +295,26 @@ handleDisconnect();
             })
         app.get('/SearchResults',function (req,res){
             var params= req.query.search;
-            let sql2="SELECT * FROM `Nhom2_Products` WHERE nameProduct LIKE '%"+params+"%'";
+            var sql2="SELECT * FROM `Nhom2_Products` WHERE nameProduct LIKE '%"+params+"%'";
+           var sbn=req.query.sort_by_name;
+            var lms=req.query.sort_by_show;
+            console.log(sbn,lms,params);
+            if((sbn=='none'&&lms=='all')||(sbn===undefined&&lms===undefined)){
+                console.log(true);
+            }
+            else if (sbn!='none'&&lms=='all'){
+                sql2="SELECT * FROM `Nhom2_Products` WHERE nameProduct LIKE '%"+params+"%'\n" +
+                    "order BY "+sbn+" asc";
+            }
+            else if (sbn=='none'&&lms!='all'){
+                sql2="SELECT * FROM `Nhom2_Products` WHERE nameProduct LIKE '%"+params+"%'\n" +
+                    "limit "+lms+"";
+            }
+            else if (sbn!='none'&&lms!='all'){
+                sql2="SELECT * FROM `Nhom2_Products` WHERE nameProduct LIKE '%"+params+"%'\n" +
+                    "order BY "+sbn+" asc " +
+                    "limit "+lms+"";
+            }
             conn.query(sql2,function (err,rs){
                 if(err) console.log(err)
                 else
