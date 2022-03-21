@@ -142,7 +142,6 @@
                     hours[<%-JSON.stringify(product_top3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(product_top3[i].ID)%>] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                     minutes[<%-JSON.stringify(product_top3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(product_top3[i].ID)%>] % (1000 * 60 * 60)) / (1000 * 60));
                     seconds[<%-JSON.stringify(product_top3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(product_top3[i].ID)%>] % (1000 * 60)) / 1000);
-                    // Output the result in an element with id="demo"
                     document.getElementById("bid_<%-JSON.stringify(product_top3[i].ID)%>counter").innerHTML = days[<%-JSON.stringify(product_top3[i].ID)%>] + "d :" + hours[<%-JSON.stringify(product_top3[i].ID)%>] + "h : "
                         + minutes[<%-JSON.stringify(product_top3[i].ID)%>] + " m :" + seconds[<%-JSON.stringify(product_top3[i].ID)%>] + "s  ";
 
