@@ -45,16 +45,18 @@ a{
 .slide{
     position: absolute;
     top: 198px;
-    left: 33px;
+    left: 163px;
     z-index: 2;
+    width: 850px;
 }
 .mySlides {
     display: none;
     border-radius: 30px;
+    background-color: white;
 }
 .mySlides img{
     height: 575px;
-    width: 1090px;
+    width: 850px;
     border-radius: 20px;
 }
 /* Add a pointer when hovering over the thumbnail images */

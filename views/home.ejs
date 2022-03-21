@@ -230,16 +230,20 @@
             <a href="#0" class="normal-button">View All</a>
         </div>
         <div class="row justify-content-center mb-30-none">
-            <div class="col-sm-10 col-md-6 col-lg-4">
+            <script type="text/javascript">
+                var tEnd1=[],counDownDate1=[],ID1=[],x1=[],now1=[],distance1=[],days1=[],hours1=[],minutes1=[],seconds1=[];
+            </script>
+            <%for(var i=0;i<sql_JewerlyTop3.length;i++){ %>
+            <div class="col-sm-10 col-md-6 col-lg-4 " id="<%=sql_JewerlyTop3[i].ID%>" >
                 <div class="auction-item-2">
                     <div class="auction-thumb">
-                        <a href="./product-details.html"><img src="https://sencowebfiles.s3.ap-south-1.amazonaws.com/products/dvEyi0DMaSol7BkSNire191DzOxvaUfQNBTCD3mE.jpeg" alt="jewelry"></a>
-                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
+                        <a href="/productDetail/ <%= sql_JewerlyTop3[i].ID %> " ><img src="<%=sql_JewerlyTop3[i].img1%>" alt="car" ></a>
+                        <a href="/productDetail/ <%= sql_JewerlyTop3[i].ID %> " class="rating"><i class="far fa-star"></i></a>
+                        <a href="/productDetail/ <%= sql_JewerlyTop3[i].ID %> " class="bid"><i class="flaticon-auction"></i></a>
                     </div>
                     <div class="auction-content">
                         <h6 class="title">
-                            <a href="./product-details.html">Gold Ring With Clear Stones</a>
+                            <a href="#0"><%=sql_JewerlyTop3[i].nameProduct%></a>
                         </h6>
                         <div class="bid-area">
                             <div class="bid-amount">
@@ -248,7 +252,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount">$876.00</div>
+                                    <div class="amount"><%=sql_JewerlyTop3[i].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bid-amount">
@@ -257,13 +261,14 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
+                                    <div class="amount">$<%= sql_JewerlyTop3[i].buyNow %></div>
                                 </div>
                             </div>
                         </div>
                         <div class="countdown-area">
                             <div class="countdown">
-                                <div id="bid_counter23">0d  : 10h  : 42m  : 13s</div>
+                                <div id="bid_<%=sql_JewerlyTop3[i].ID%>counter">
+                                </div>
                             </div>
                             <span class="total-bids">30 Bids</span>
                         </div>
@@ -273,92 +278,34 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-10 col-md-6 col-lg-4">
-                <div class="auction-item-2">
-                    <div class="auction-thumb">
-                        <a href="./product-details.html"><img src="https://sencowebfiles.s3.ap-south-1.amazonaws.com/products/Ry30aLDuK7yoBYklAQA9aunyylMPg9ngGauLKU6E.jpeg" alt="jewelry"></a>
-                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
-                    </div>
-                    <div class="auction-content">
-                        <h6 class="title">
-                            <a href="./product-details.html">Ring With Clear Stone Accents</a>
-                        </h6>
-                        <div class="bid-area">
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-auction"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Current Bid</div>
-                                    <div class="amount">$876.00</div>
-                                </div>
-                            </div>
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-money"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="countdown-area">
-                            <div class="countdown">
-                                <div id="bid_counter24">0d  : 10h  : 42m  : 13s</div>
-                            </div>
-                            <span class="total-bids">30 Bids</span>
-                        </div>
-                        <div class="text-center">
-                            <a href="#0" class="custom-button">Submit a bid</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-10 col-md-6 col-lg-4">
-                <div class="auction-item-2">
-                    <div class="auction-thumb">
-                        <a href="./product-details.html"><img src="https://staticimg.titan.co.in/Tanishq/Catalog/512714FCPAAP3_2.jpg?impolicy=pqmed&imwidth=640" alt="jewelry"></a>
-                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
-                    </div>
-                    <div class="auction-content">
-                        <h6 class="title">
-                            <a href="./product-details.html">Stunning Filigree Gold </a>
-                        </h6>
-                        <div class="bid-area">
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-auction"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Current Bid</div>
-                                    <div class="amount">$876.00</div>
-                                </div>
-                            </div>
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-money"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="countdown-area">
-                            <div class="countdown">
-                                <div id="bid_counter25">0d  : 10h  : 42m  : 13s</div>
-                            </div>
-                            <span class="total-bids">30 Bids</span>
-                        </div>
-                        <div class="text-center">
-                            <a href="#0" class="custom-button">Submit a bid</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <script type="text/javascript">
+                //time down
+                // Set the date we're counting down to
+                tEnd1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] = <%- JSON.stringify(sql_JewerlyTop3[i].timeEnd)%> ;
+                counDownDate1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] = new Date(tEnd1[ <%-JSON.stringify(sql_JewerlyTop3[i].ID)%> ]).getTime();
+                // Update the count down every 1 second
+                x1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] = setInterval(function() {
+                    // Get today's date and time
+                    now1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] = new Date().getTime();
+                    // Find the distance between now and the count down date
+                    distance1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] = counDownDate1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] - now1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>];
+                    // Time calculations for days, hours, minutes and seconds
+                    days1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] = Math.floor(distance1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] / (1000 * 60 * 60 * 24));
+                    hours1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] = Math.floor((distance1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    minutes1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] = Math.floor((distance1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] % (1000 * 60 * 60)) / (1000 * 60));
+                    seconds1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] = Math.floor((distance1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] % (1000 * 60)) / 1000);
+                    // Output the result in an element with id="demo"
+                    document.getElementById("bid_<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>counter").innerHTML = days1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] + "d :" + hours1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] + "h : "
+                        + minutes1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] + " m :" + seconds1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] + "s  ";
+                    // If the count down is over, write some text
+                    if (distance1[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>] < 0) {
+                        clearInterval(x[<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>]);
+                        document.getElementById("bid_<%-JSON.stringify(sql_JewerlyTop3[i].ID)%>counter").innerHTML = "AUCTION ENDED";
+                    }
+                }, 1000);
+                //end timedown
+            </script>
+            <%}%>
         </div>
     </div>
 </section>
@@ -390,16 +337,20 @@
             <a href="#0" class="normal-button">View All</a>
         </div>
         <div class="row justify-content-center mb-30-none">
-            <div class="col-sm-10 col-md-6 col-lg-4">
+            <script type="text/javascript">
+                var tEnd2=[],counDownDate2=[],ID2=[],x2=[],now2=[],distance2=[],days2=[],hours2=[],minutes2=[],seconds2=[];
+            </script>
+            <%for(var i=0;i<sql_WatchesTop3.length;i++){ %>
+            <div class="col-sm-10 col-md-6 col-lg-4 " id="<%=sql_WatchesTop3[i].ID%>" >
                 <div class="auction-item-2">
                     <div class="auction-thumb">
-                        <a href="./product-details.html"><img src="https://rolex.dafc.com.vn/wp-content/uploads/watch-assets-front-facing/landscape_assets/m126711chnr-0002_modelpage_front_facing_landscape.png" alt="watches"></a>
-                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
+                        <a href="/productDetail/ <%= sql_WatchesTop3[i].ID %> " ><img src="<%=sql_WatchesTop3[i].img1%>" alt="car" ></a>
+                        <a href="/productDetail/ <%= sql_WatchesTop3[i].ID %> " class="rating"><i class="far fa-star"></i></a>
+                        <a href="/productDetail/ <%= sql_WatchesTop3[i].ID %> " class="bid"><i class="flaticon-auction"></i></a>
                     </div>
                     <div class="auction-content">
                         <h6 class="title">
-                            <a href="./product-details.html">Rolex GMT-MASTER II</a>
+                            <a href="#0"><%=sql_WatchesTop3[i].nameProduct%></a>
                         </h6>
                         <div class="bid-area">
                             <div class="bid-amount">
@@ -408,7 +359,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount">$876.00</div>
+                                    <div class="amount"><%=sql_WatchesTop3[i].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bid-amount">
@@ -417,13 +368,14 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
+                                    <div class="amount">$<%= sql_WatchesTop3[i].buyNow %></div>
                                 </div>
                             </div>
                         </div>
                         <div class="countdown-area">
                             <div class="countdown">
-                                <div id="bid_counter20">0d  : 10h  : 42m  : 13s</div>
+                                <div id="bid_<%=sql_WatchesTop3[i].ID%>counter">
+                                </div>
                             </div>
                             <span class="total-bids">30 Bids</span>
                         </div>
@@ -433,92 +385,34 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-10 col-md-6 col-lg-4">
-                <div class="auction-item-2">
-                    <div class="auction-thumb">
-                        <a href="./product-details.html"><img src="https://bossluxurywatch.vn/uploads/san-pham/rolex/gmt-master/thumbs/645x0/rolex-gmt-master-ii-126710blro.png" alt="watches"></a>
-                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
-                    </div>
-                    <div class="auction-content">
-                        <h6 class="title">
-                            <a href="./product-details.html">Rolex GMT-MASTER II</a>
-                        </h6>
-                        <div class="bid-area">
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-auction"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Current Bid</div>
-                                    <div class="amount">$876.00</div>
-                                </div>
-                            </div>
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-money"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="countdown-area">
-                            <div class="countdown">
-                                <div id="bid_counter21">0d  : 10h  : 42m  : 13s</div>
-                            </div>
-                            <span class="total-bids">30 Bids</span>
-                        </div>
-                        <div class="text-center">
-                            <a href="#0" class="custom-button">Submit a bid</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-10 col-md-6 col-lg-4">
-                <div class="auction-item-2">
-                    <div class="auction-thumb">
-                        <a href="./product-details.html"><img src="https://rolex.dafc.com.vn/wp-content/uploads/watch-assets-on-wrist/landscape_assets/m124060-0001_modelpage_on_wrist_landscape.jpg" alt="watches"></a>
-                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
-                    </div>
-                    <div class="auction-content">
-                        <h6 class="title">
-                            <a href="./product-details.html">Rolex SUBMARINER</a>
-                        </h6>
-                        <div class="bid-area">
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-auction"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Current Bid</div>
-                                    <div class="amount">$876.00</div>
-                                </div>
-                            </div>
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-money"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="countdown-area">
-                            <div class="countdown">
-                                <div id="bid_counter22">0d  : 10h  : 42m  : 13s</div>
-                            </div>
-                            <span class="total-bids">30 Bids</span>
-                        </div>
-                        <div class="text-center">
-                            <a href="#0" class="custom-button">Submit a bid</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <script type="text/javascript">
+                //time down
+                // Set the date we're counting down to
+                tEnd2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] = <%- JSON.stringify(sql_WatchesTop3[i].timeEnd)%> ;
+                counDownDate2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] = new Date(tEnd2[ <%-JSON.stringify(sql_WatchesTop3[i].ID)%> ]).getTime();
+                // Update the count down every 1 second
+                x2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] = setInterval(function() {
+                    // Get today's date and time
+                    now2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] = new Date().getTime();
+                    // Find the distance between now and the count down date
+                    distance2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] = counDownDate2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] - now2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>];
+                    // Time calculations for days, hours, minutes and seconds
+                    days2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] = Math.floor(distance2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] / (1000 * 60 * 60 * 24));
+                    hours2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] = Math.floor((distance2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    minutes2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] = Math.floor((distance2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] % (1000 * 60 * 60)) / (1000 * 60));
+                    seconds2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] = Math.floor((distance2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] % (1000 * 60)) / 1000);
+                    // Output the result in an element with id="demo"
+                    document.getElementById("bid_<%-JSON.stringify(sql_WatchesTop3[i].ID)%>counter").innerHTML = days2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] + "d :" + hours2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] + "h : "
+                        + minutes2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] + " m :" + seconds2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] + "s  ";
+                    // If the count down is over, write some text
+                    if (distance2[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>] < 0) {
+                        clearInterval(x[<%-JSON.stringify(sql_WatchesTop3[i].ID)%>]);
+                        document.getElementById("bid_<%-JSON.stringify(sql_WatchesTop3[i].ID)%>counter").innerHTML = "AUCTION ENDED";
+                    }
+                }, 1000);
+                //end timedown
+            </script>
+            <%}%>
         </div>
     </div>
 </section>
@@ -709,16 +603,20 @@
             <a href="#0" class="normal-button">View All</a>
         </div>
         <div class="row justify-content-center mb-30-none">
-            <div class="col-sm-10 col-md-6 col-lg-4">
+            <script type="text/javascript">
+                var tEnd3=[],counDownDate3=[],ID3=[],x3=[],now3=[],distance3=[],days3=[],hours3=[],minutes3=[],seconds3=[];
+            </script>
+            <%for(var i=0;i<sql_CoinBullionTop3.length;i++){ %>
+            <div class="col-sm-10 col-md-6 col-lg-4 " id="<%=sql_CoinBullionTop3[i].ID%>" >
                 <div class="auction-item-2">
                     <div class="auction-thumb">
-                        <a href="./product-details.html"><img src="https://thumbor.granitemedia.com/1804-silver-dollar-worth-millions-of-dollars/6loTaUPPwiy8zyrDfi0KnOJl8P8=/800x783/filters:format(webp):quality(80)/granite-web-prod/95/7e/957e0dbe1fff4216b5e0f30454a96676.jpeg" alt="coins"></a>
-                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
+                        <a href="/productDetail/ <%= sql_CoinBullionTop3[i].ID %> " ><img src="<%=sql_CoinBullionTop3[i].img1%>" alt="car" ></a>
+                        <a href="/productDetail/ <%= sql_CoinBullionTop3[i].ID %> " class="rating"><i class="far fa-star"></i></a>
+                        <a href="/productDetail/ <%= sql_CoinBullionTop3[i].ID %> " class="bid"><i class="flaticon-auction"></i></a>
                     </div>
                     <div class="auction-content">
                         <h6 class="title">
-                            <a href="./product-details.html"> Coin LIBERTY 1804</a>
+                            <a href="#0"><%=sql_CoinBullionTop3[i].nameProduct%></a>
                         </h6>
                         <div class="bid-area">
                             <div class="bid-amount">
@@ -727,7 +625,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount">$876.00</div>
+                                    <div class="amount"><%=sql_CoinBullionTop3[i].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bid-amount">
@@ -736,13 +634,14 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
+                                    <div class="amount">$<%= sql_CoinBullionTop3[i].buyNow %></div>
                                 </div>
                             </div>
                         </div>
                         <div class="countdown-area">
                             <div class="countdown">
-                                <div id="bid_counter17">0d  : 10h  : 42m  : 13s</div>
+                                <div id="bid_<%=sql_CoinBullionTop3[i].ID%>counter">
+                                </div>
                             </div>
                             <span class="total-bids">30 Bids</span>
                         </div>
@@ -752,92 +651,34 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-10 col-md-6 col-lg-4">
-                <div class="auction-item-2">
-                    <div class="auction-thumb">
-                        <a href="./product-details.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXjLyBvM39dH0JDVSw0QzI8pJ3Fj3ut1CAHg&usqp=CAU" alt="coins"></a>
-                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
-                    </div>
-                    <div class="auction-content">
-                        <h6 class="title">
-                            <a href="./product-details.html">Coin Italya 1224</a>
-                        </h6>
-                        <div class="bid-area">
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-auction"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Current Bid</div>
-                                    <div class="amount">$876.00</div>
-                                </div>
-                            </div>
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-money"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="countdown-area">
-                            <div class="countdown">
-                                <div id="bid_counter18">0d  : 10h  : 42m  : 13s</div>
-                            </div>
-                            <span class="total-bids">30 Bids</span>
-                        </div>
-                        <div class="text-center">
-                            <a href="#0" class="custom-button">Submit a bid</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-10 col-md-6 col-lg-4">
-                <div class="auction-item-2">
-                    <div class="auction-thumb">
-                        <a href="./product-details.html"><img src="https://cdn-amz.fadoglobal.io/images/I/71trlhw5G1L.jpg" alt="coins"></a>
-                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
-                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
-                    </div>
-                    <div class="auction-content">
-                        <h6 class="title">
-                            <a href="./product-details.html">Yuna coin</a>
-                        </h6>
-                        <div class="bid-area">
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-auction"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Current Bid</div>
-                                    <div class="amount">$876.00</div>
-                                </div>
-                            </div>
-                            <div class="bid-amount">
-                                <div class="icon">
-                                    <i class="flaticon-money"></i>
-                                </div>
-                                <div class="amount-content">
-                                    <div class="current">Buy Now</div>
-                                    <div class="amount">$5,00.00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="countdown-area">
-                            <div class="countdown">
-                                <div id="bid_counter19">0d  : 10h  : 42m  : 13s</div>
-                            </div>
-                            <span class="total-bids">30 Bids</span>
-                        </div>
-                        <div class="text-center">
-                            <a href="#0" class="custom-button">Submit a bid</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <script type="text/javascript">
+                //time down
+                // Set the date we're counting down to
+                tEnd3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] = <%- JSON.stringify(sql_CoinBullionTop3[i].timeEnd)%> ;
+                counDownDate3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] = new Date(tEnd3[ <%-JSON.stringify(sql_CoinBullionTop3[i].ID)%> ]).getTime();
+                // Update the count down every 1 second
+                x3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] = setInterval(function() {
+                    // Get today's date and time
+                    now3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] = new Date().getTime();
+                    // Find the distance between now and the count down date
+                    distance3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] = counDownDate3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] - now3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>];
+                    // Time calculations for days, hours, minutes and seconds
+                    days3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] = Math.floor(distance3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] / (1000 * 60 * 60 * 24));
+                    hours3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] = Math.floor((distance3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    minutes3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] = Math.floor((distance3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] % (1000 * 60 * 60)) / (1000 * 60));
+                    seconds3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] = Math.floor((distance3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] % (1000 * 60)) / 1000);
+                    // Output the result in an element with id="demo"
+                    document.getElementById("bid_<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>counter").innerHTML = days3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] + "d :" + hours3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] + "h : "
+                        + minutes3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] + " m :" + seconds3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] + "s  ";
+                    // If the count down is over, write some text
+                    if (distance3[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>] < 0) {
+                        clearInterval(x[<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>]);
+                        document.getElementById("bid_<%-JSON.stringify(sql_CoinBullionTop3[i].ID)%>counter").innerHTML = "AUCTION ENDED";
+                    }
+                }, 1000);
+                //end timedown
+            </script>
+            <%}%>
         </div>
     </div>
 </section>
