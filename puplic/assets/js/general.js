@@ -57,6 +57,7 @@ function removeItemClient(){  // delete item from display and send name of produ
     itemRemove.forEach(function (btn,index){
         btn.addEventListener('click',function (evn){
             var itemRemove= evn.target.parentElement;
+            console.log(evn.target.parentElement)
             var nameRemove=itemRemove.querySelector('.content>.title>a').innerHTML;
             removeItem(nameRemove);
             itemRemove.parentElement.style.display='none';

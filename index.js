@@ -104,7 +104,7 @@ app.get('/',function (req,res) {
         }
     });
 });
-        app.get('/productDetail/:ID',function (req,res){
+app.get('/productDetail/:ID',function (req,res){
             let id= parseInt(req.params.ID);
             let sql="select * from Nhom2_Products where ID="+id+"";
             let product,timeEnd;
@@ -122,17 +122,18 @@ app.get('/',function (req,res) {
                             else {
                                 console.log('update successfully');
                                 product.currentPrice=barGain;
+                                res.redirect("/productDetail/"+id+"")
                             }
                         })
                     }
-                    res.render('Products_Detail',{
-                        product : product,
-                        timeEnd: timeEnd
-                    });
+                    else
+                        res.render('Products_Detail',{
+                            product : product,
+                            timeEnd: timeEnd
+                        });
                     }
             });
         });
-
         app.get('/contact_Us',function (req,res){
             res.render('contact_Us');
         });
