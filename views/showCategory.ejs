@@ -117,34 +117,19 @@
 <!--============= Product Auction Section Starts Here =============-->
 <div class="product-auction padding-bottom">
     <div class="container">
-            <form class="product-search ml-auto" style="width: 100%;" method="get" action="/SearchResults">
-                <div class="product-header mb-40">
-                    <div class="product-header-item">
-                        <div class="item">Sort By : </div>
-                        <select name="sort_by_name" class="select-bar">
-                            <option value="none">None</option>
-                            <option value="nameProduct">Name</option>
-                            <option value="timeEnd">Time</option>
-                            <option value="currentPrice">Price</option>
-                        </select>
-                    </div>
-                    <div class="product-header-item">
-                        <div class="item">Show : </div>
-                        <select name="sort_by_show" class="select-bar">
-                            <option value="all">all</option>
-                            <option value="3">3</option>
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                        </select>
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Item Name" name="search" >
-                        <button type="submit"><i class="fas fa-search"></i></button>
-
-                    </div>
+        <form class="product-search ml-auto" style="width: 100%;" method="get" action="/SearchResults">
+            <div style="display:flex">
+                <div style="width:60%">
+                    <h3 style="color:black">All products !</h3>
                 </div>
-            </form>
+
+                <div style="width:40%">
+                    <input type="text" placeholder="Item Name" name="search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+
+                </div>
+            </div>
+        </form>
         <div class="row mb-30-none justify-content-start">
             <script type="text/javascript">
                 var tEnd2=[],counDownDate2=[],ID2=[],x2=[],now2=[],distance2=[],days2=[],hours2=[],minutes2=[],seconds2=[];
