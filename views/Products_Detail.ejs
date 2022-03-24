@@ -254,9 +254,9 @@
                      <img src="assets/images/product/search-icon.png">
                  </div>
                  <div  class="form-submit-abid">
-                     <form method="get"action="/productDetail/<%=product.ID%>">
-                         <input type="number" name="barGain" placeholder="Enter you amount"  >
-                         <button type="submit"  class="button-submit">Submit A Bid</button>
+                     <form action="/productDetail/<%=product.ID%>"  method="get">
+                         <input type="number" name="barGain" placeholder="Enter you amount" id="bargaintxt" >
+                         <button type="submit"  class="button-submit" id="bargainbtn">Submit A Bid</button>
                      </form>
                  </div>
              </div>
@@ -763,11 +763,11 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
              }
         };
     };
-     var submitABid=document.querySelector('.button-submit');
-     submitABid.addEventListener('click',function (){
-     })
-     var priceCurrent=parseInt(document.getElementById('priceCurrent').innerHTML)
-     console.log(submitABid,priceCurrent);
+    var bgt= document.getElementById("bargaintxt").value;
+    var bgb= document.getElementById("bargainbtn");
+        bgb.addEventListener('click',function (){
+            console.log(bgt)
+        })
 </script>
 <script type="text/javascript" src="assets/js/Products_Detail.js"></script>
 <script type="text/javascript" src="assets/js/general.js"></script>

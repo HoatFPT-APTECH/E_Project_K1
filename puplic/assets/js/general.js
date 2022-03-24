@@ -37,7 +37,7 @@ for (var i=0;i<products.length;i++){  //hien thi localstorge
     var cart=document.querySelector('.cart-products');
        var creatdiv=document.createElement('div');
 
-       var divContent=' <div class="single-product-item"> <div class="thumb"> <a href="#0"><img src="'+products[i].img+'" alt="shop"></a> </div> <div class="content"> <h4 class="title"><a href="#0">'+products[i].name+'</a></h4> <div class="price"><span class="pprice">$'+products[i].price+'</span> </div> <button class="remove-cart">Remove</button> </div> </div>'
+       var divContent=' <div class="single-product-item"> <div class="thumb"> <a href="/productDetail/'+products[i].id+'"><img src="'+products[i].img+'" alt="shop"></a> </div> <div class="content"> <h4 class="title"><a href="/productDetail/'+products[i].id+'" style="color: white">'+products[i].name+'</a></h4> <div class="price"><span class="pprice">Price: $'+products[i].price+'</span> </div> <button class="remove-cart">Remove</button> </div> </div>'
        creatdiv.innerHTML=divContent;
        cart.append(creatdiv);
 }

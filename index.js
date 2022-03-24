@@ -162,7 +162,7 @@ app.get('/auction_2',function (req,res){
         if(err) console.log(err)
         else
             product_top3=rs;
-        {   let sql2="SELECT * FROM `Nhom2_Products` WHERE ID>=19 AND ID<=37";
+        {   let sql2="SELECT * FROM `Nhom2_Products` WHERE ID>=19 AND ID<=36";
             conn.query(sql2,function (err,rs1){
                 if(err) console.log(err)
                 else
@@ -181,7 +181,7 @@ app.get('/auction_3',function (req,res){
         if(err) console.log(err)
         else
             product_top3=rs;
-        {   let sql2="SELECT * FROM `Nhom2_Products` WHERE ID>=38 AND ID<=56";
+        {   let sql2="SELECT * FROM `Nhom2_Products` WHERE ID>=37 AND ID<=55";
             conn.query(sql2,function (err,rs1){
                 if(err) console.log(err)
                 else
