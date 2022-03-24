@@ -100,7 +100,7 @@
                     seconds[<%-JSON.stringify(product_top3[i].ID)%>] = Math.floor((distance[<%-JSON.stringify(product_top3[i].ID)%>] % (1000 * 60)) / 1000);
                     // Output the result in an element with id="demo"
                     document.getElementById("bid_<%-JSON.stringify(product_top3[i].ID)%>counter").innerHTML = days[<%-JSON.stringify(product_top3[i].ID)%>] + "d :" + hours[<%-JSON.stringify(product_top3[i].ID)%>] + "h : "
-                        + minutes[<%-JSON.stringify(product_top3[i].ID)%>] + " m :" + seconds[<%-JSON.stringify(product_top3[i].ID)%>] + "s  ";
+                    + minutes[<%-JSON.stringify(product_top3[i].ID)%>] + " m :" + seconds[<%-JSON.stringify(product_top3[i].ID)%>] + "s  ";
                     // If the count down is over, write some text
                     if (distance[<%-JSON.stringify(product_top3[i].ID)%>] < 0) {
                         clearInterval(x[<%-JSON.stringify(product_top3[i].ID)%>]);
@@ -196,7 +196,7 @@
                     seconds2[<%-JSON.stringify(product_bottom[i].ID)%>] = Math.floor((distance2[<%-JSON.stringify(product_bottom[i].ID)%>] % (1000 * 60)) / 1000);
                     // Output the result in an element with id="demo"
                     document.getElementById("bid_<%-JSON.stringify(product_bottom[i].ID)%>counter2").innerHTML = days2[<%-JSON.stringify(product_bottom[i].ID)%>] + "d :" + hours2[<%-JSON.stringify(product_bottom[i].ID)%>] + "h : "
-                        + minutes2[<%-JSON.stringify(product_bottom[i].ID)%>] + " m :" + seconds2[<%-JSON.stringify(product_bottom[i].ID)%>] + "s  ";
+                    + minutes2[<%-JSON.stringify(product_bottom[i].ID)%>] + " m :" + seconds2[<%-JSON.stringify(product_bottom[i].ID)%>] + "s  ";
                     // If the count down is over, write some text
                     if (distance2[<%-JSON.stringify(product_bottom[i].ID)%>] < 0) {
                         clearInterval(x[<%-JSON.stringify(product_bottom[i].ID)%>]);
@@ -212,13 +212,13 @@
                 <a href="#0"><i class="flaticon-left-arrow"></i></a>
             </li>
             <li>
-                <a href="/auction" class="active">1</a>
+                <a href="#0" >1</a>
             </li>
             <li>
-                <a href="/auction_2" >2</a>
+                <a href="#0" >2</a>
             </li>
             <li>
-                <a href="/auction_3">3</a>
+                <a href="#0" class="active">3</a>
             </li>
             <li>
                 <a href="#0"><i class="flaticon-right-arrow"></i></a>

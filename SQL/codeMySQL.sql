@@ -390,9 +390,11 @@ values
         'https://images.indianexpress.com/2022/02/AstaGuru.jpg',
         'https://images.indianexpress.com/2022/02/AstaGuru.jpg',
         'https://images.indianexpress.com/2022/02/AstaGuru.jpg',
-		60000,
+		61000,
 		100,
 		10500,
 		'AstaGuru"contemporary Art is best product . You can find.',
 		'2022-04-22 12:11:24',
 		6);
+	
+		

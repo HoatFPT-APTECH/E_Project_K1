@@ -52,8 +52,6 @@ function handleDisconnect() {
 
 handleDisconnect();
 //end connect to database
-
-
 app.get('/',function (req,res) {
     let sql = "SELECT * FROM Nhom2_Products";
     let products;
@@ -105,6 +103,7 @@ app.get('/',function (req,res) {
     });
 });
 app.get('/productDetail/:ID',function (req,res){
+           console.log(req.params.ID)
             let id= parseInt(req.params.ID);
             let sql="select * from Nhom2_Products where ID="+id+"";
             let product,timeEnd;
@@ -138,18 +137,62 @@ app.get('/productDetail/:ID',function (req,res){
             res.render('contact_Us');
         });
         app.get('/auction',function (req,res){
-            let sql = "SELECT * FROM Nhom2_Products";
-            let products;
-            conn.query(sql, function (err, rs) {
-                    if (err) console.log(err)
-                    else {
-                        res.render('auction',{
-                            products:rs
-                        })
-                    }
-                }
-            );
+
+            let sql1="SELECT * FROM `Nhom2_Products` WHERE ID IN(1,7,14)";
+            conn.query(sql1,function (err,rs){
+                if(err) console.log(err)
+                else
+                    product_top3=rs;
+                {   let sql2="SELECT * FROM `Nhom2_Products` WHERE ID>=1 AND ID<=18";
+                    conn.query(sql2,function (err,rs1){
+                        if(err) console.log(err)
+                        else
+                            res.render('auction' +
+                                '',{
+                                product_bottom: rs1,
+                                product_top3: rs
+                            })
+                    });}
+            });
         });
+app.get('/auction_2',function (req,res){
+
+    let sql1="SELECT * FROM `Nhom2_Products` WHERE ID IN(1,7,14)";
+    conn.query(sql1,function (err,rs){
+        if(err) console.log(err)
+        else
+            product_top3=rs;
+        {   let sql2="SELECT * FROM `Nhom2_Products` WHERE ID>=19 AND ID<=37";
+            conn.query(sql2,function (err,rs1){
+                if(err) console.log(err)
+                else
+                    res.render('auction_2' +
+                        '',{
+                        product_bottom: rs1,
+                        product_top3: rs
+                    })
+            });}
+    });
+});
+app.get('/auction_3',function (req,res){
+
+    let sql1="SELECT * FROM `Nhom2_Products` WHERE ID IN(1,7,14)";
+    conn.query(sql1,function (err,rs){
+        if(err) console.log(err)
+        else
+            product_top3=rs;
+        {   let sql2="SELECT * FROM `Nhom2_Products` WHERE ID>=38 AND ID<=56";
+            conn.query(sql2,function (err,rs1){
+                if(err) console.log(err)
+                else
+                    res.render('auction_3' +
+                        '',{
+                        product_bottom: rs1,
+                        product_top3: rs
+                    })
+            });}
+    });
+});
         app.get('/Sign_In',function (req,res){
             res.render('Sign_In');
         });
