@@ -105,7 +105,7 @@
                                     </div>
                                     <div class="amount-content">
                                         <div class="current">Current Bid</div>
-                                        <div class="amount"><%=sql_productTop3[i].priceCurrent%></div>
+                                        <div class="amount convertMoney"><%=sql_productTop3[i].priceCurrent%></div>
                                     </div>
                                 </div>
                                 <div class="bid-amount">
@@ -113,8 +113,8 @@
                                         <i class="flaticon-money"></i>
                                     </div>
                                     <div class="amount-content">
-                                        <div class="current">Buy Now</div>
-                                        <div class="amount"><%= sql_productTop3[i].buyNow %></div>
+                                        <div class="current ">Buy Now</div>
+                                        <div class="amount convertMoney"><%= sql_productTop3[i].buyNow %></div>
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +126,7 @@
                                 <span class="total-bids">30 Bids</span>
                             </div>
                             <div class="text-center">
-                                <a href="#0" class="custom-button">Submit a bid</a>
+                                <a href="/productDetail/<%=sql_productTop3[i].ID%>" class="custom-button">Submit a bid</a>
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount"><%=sql_JewerlyTop3[i].priceCurrent%></div>
+                                    <div class="amount convertMoney"><%=sql_JewerlyTop3[i].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bid-amount">
@@ -184,7 +184,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Buy Now</div>
-                                    <div class="amount"><%= sql_JewerlyTop3[i].buyNow %></div>
+                                    <div class="amount convertMoney"><%= sql_JewerlyTop3[i].buyNow %></div>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +196,7 @@
                             <span class="total-bids">30 Bids</span>
                         </div>
                         <div class="text-center">
-                            <a href="#0" class="custom-button">Submit a bid</a>
+                            <a href="/productDetail/<%=sql_JewerlyTop3[i].ID%>" class="custom-button">Submit a bid</a>
                         </div>
                     </div>
                 </div>
@@ -252,7 +252,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount"><%=sql_WatchesTop3[i].priceCurrent%></div>
+                                    <div class="amount convertMoney"><%=sql_WatchesTop3[i].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bid-amount">
@@ -261,7 +261,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Buy Now</div>
-                                    <div class="amount"><%= sql_WatchesTop3[i].buyNow %></div>
+                                    <div class="amount convertMoney"><%= sql_WatchesTop3[i].buyNow %></div>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +273,7 @@
                             <span class="total-bids">30 Bids</span>
                         </div>
                         <div class="text-center">
-                            <a href="#0" class="custom-button">Submit a bid</a>
+                            <a href="/productDetail/<%=sql_WatchesTop3[i].ID%>" class="custom-button">Submit a bid</a>
                         </div>
                     </div>
                 </div>
@@ -309,7 +309,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount"><%=products[0].priceCurrent%></div>
+                                    <div class="amount convertMoney"><%=products[0].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bids-area">
@@ -334,7 +334,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount"><%=products[6].priceCurrent%></div>
+                                    <div class="amount convertMoney"><%=products[6].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bids-area">
@@ -359,7 +359,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount"><%=products[10].priceCurrent%></div>
+                                    <div class="amount convertMoney"><%=products[10].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bids-area">
@@ -384,7 +384,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount"><%=products[15].priceCurrent%></div>
+                                    <div class="amount convertMoney"><%=products[15].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bids-area">
@@ -409,7 +409,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount"><%=products[20].priceCurrent%></div>
+                                    <div class="amount convertMoney"><%=products[20].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bids-area">
@@ -434,7 +434,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount"><%=products[25].priceCurrent%></div>
+                                    <div class="amount convertMoney"><%=products[25].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bids-area">
@@ -483,7 +483,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Current Bid</div>
-                                    <div class="amount"><%=sql_CoinBullionTop3[i].priceCurrent%></div>
+                                    <div class="amount convertMoney"><%=sql_CoinBullionTop3[i].priceCurrent%></div>
                                 </div>
                             </div>
                             <div class="bid-amount">
@@ -492,7 +492,7 @@
                                 </div>
                                 <div class="amount-content">
                                     <div class="current">Buy Now</div>
-                                    <div class="amount"><%= sql_CoinBullionTop3[i].buyNow %></div>
+                                    <div class="amount convertMoney"><%= sql_CoinBullionTop3[i].buyNow %></div>
                                 </div>
                             </div>
                         </div>
@@ -504,7 +504,7 @@
                             <span class="total-bids">30 Bids</span>
                         </div>
                         <div class="text-center">
-                            <a href="#0" class="custom-button">Submit a bid</a>
+                            <a href="/productDetail/<%=sql_CoinBullionTop3[i].ID%>" class="custom-button">Submit a bid</a>
                         </div>
                     </div>
                 </div>
@@ -547,7 +547,7 @@
                                         </div>
                                         <div class="amount-content">
                                             <div class="current">Current Bid</div>
-                                            <div class="amount"><%=products[19].priceCurrent%></div>
+                                            <div class="amount convertMoney"><%=products[19].priceCurrent%></div>
                                         </div>
                                     </div>
                                     <div class="bid-amount">
@@ -556,7 +556,7 @@
                                         </div>
                                         <div class="amount-content">
                                             <div class="current">Buy Now</div>
-                                            <div class="amount"><%=products[19].buyNow%></div>
+                                            <div class="amount convertMoney"><%=products[19].buyNow%></div>
                                         </div>
                                     </div>
                                 </div>
@@ -567,7 +567,7 @@
                                     <span class="total-bids">30 Bids</span>
                                 </div>
                                 <div class="text-center">
-                                    <a href="#0" class="custom-button">Submit a bid</a>
+                                    <a href="/productDetail/<%=products[19].ID%>" class="custom-button">Submit a bid</a>
                                 </div>
                             </div>
                         </div></div>
@@ -611,7 +611,7 @@
                                                 </div>
                                                 <div class="amount-content">
                                                     <div class="current">Current Bid</div>
-                                                    <div class="amount"><%=products[20].priceCurrent%></div>
+                                                    <div class="amount convertMoney"><%=products[20].priceCurrent%></div>
                                                 </div>
                                             </div>
                                             <div class="countdown-area">
@@ -638,7 +638,7 @@
                                                 </div>
                                                 <div class="amount-content">
                                                     <div class="current">Current Bid</div>
-                                                    <div class="amount"><%=products[21].priceCurrent%></div>
+                                                    <div class="amount convertMoney"><%=products[21].priceCurrent%></div>
                                                 </div>
                                             </div>
                                             <div class="countdown-area">
@@ -665,7 +665,7 @@
                                                 </div>
                                                 <div class="amount-content">
                                                     <div class="current">Current Bid</div>
-                                                    <div class="amount"><%=products[22].priceCurrent%></div>
+                                                    <div class="amount convertMoney"><%=products[22].priceCurrent%></div>
                                                 </div>
                                             </div>
                                             <div class="countdown-area">
@@ -692,7 +692,7 @@
                                                 </div>
                                                 <div class="amount-content">
                                                     <div class="current">Current Bid</div>
-                                                    <div class="amount"><%=products[23].priceCurrent%></div>
+                                                    <div class="amount convertMoney"><%=products[23].priceCurrent%></div>
                                                 </div>
                                             </div>
                                             <div class="countdown-area">
@@ -736,7 +736,7 @@
                                                 </div>
                                                 <div class="amount-content">
                                                     <div class="current">Current Bid</div>
-                                                    <div class="amount"><%=products[24].priceCurrent%></div>
+                                                    <div class="amount convertMoney"><%=products[24].priceCurrent%></div>
                                                 </div>
                                             </div>
                                             <div class="countdown-area">
@@ -763,7 +763,7 @@
                                                 </div>
                                                 <div class="amount-content">
                                                     <div class="current">Current Bid</div>
-                                                    <div class="amount"><%=products[25].priceCurrent%></div>
+                                                    <div class="amount convertMoney"><%=products[25].priceCurrent%></div>
                                                 </div>
                                             </div>
                                             <div class="countdown-area">
@@ -790,7 +790,7 @@
                                                 </div>
                                                 <div class="amount-content">
                                                     <div class="current">Current Bid</div>
-                                                    <div class="amount"><%=products[26].priceCurrent%></div>
+                                                    <div class="amount convertMoney"><%=products[26].priceCurrent%></div>
                                                 </div>
                                             </div>
                                             <div class="countdown-area">
@@ -817,7 +817,7 @@
                                                 </div>
                                                 <div class="amount-content">
                                                     <div class="current">Current Bid</div>
-                                                    <div class="amount"><%=products[27].priceCurrent%></div>
+                                                    <div class="amount convertMoney"><%=products[27].priceCurrent%></div>
                                                 </div>
                                             </div>
                                             <div class="countdown-area">

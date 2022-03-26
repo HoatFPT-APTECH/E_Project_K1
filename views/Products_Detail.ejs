@@ -197,13 +197,10 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
             <!-- Image text -->
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
 
             <!-- Thumbnail images -->
             <div class="row1">
-                <div class="column">
+                <div class="column" style="margin-left: 80px">
                     <img class="demo cursor" src="<%=product.img1%>"  onclick="currentSlide(1)" alt="Image of Product: 1">
                 </div>
                 <div class="column">
@@ -232,13 +229,13 @@
                  <h1><%= product.nameProduct %></h1>
                  <ul style="color: dimgray">
                      <li><h6> Listing ID:<%= product.ID%> |</h6></li>
-                     <li><h6> Item #: <%=product.ID_category%></h6></li>
+                     <li><h6> Item #: <%=product.ID_Category%></h6></li>
                  </ul>
              </div>
              <div class="price2">
                 <div class="price2-detail"style="padding-top:10px ">
-                    <h2>Current Price</h2>
-                    <h1 style="color: #1e7e34" >US $ <span id="priceCurrent"><%= product.priceCurrent%></span></h1>
+                    <h2 style="line-height: 90px">Current Price</h2>
+                    <h1 style="color: #1e7e34" >US <span  class="convertMoney"><%= product.priceCurrent%></span></h1>
                 </div>
                 <div class="price2-detail">
                     <h6 style="color: dimgray">Buyer's Premium</h6>
@@ -246,7 +243,7 @@
                 </div>
                 <div class="price2-detail">
                     <h6 style="color: dimgray">Bid Increment(US)</h6>
-                    <h4 style="color: darkslategray">$<%= product.bidIntcrement %></h4>
+                    <h4 style="color: darkslategray" class="convertMoney"><%= product.bidIntcrement %></h4>
                 </div>
              </div>
              <div class="submit-bid">
@@ -261,7 +258,7 @@
                  </div>
              </div>
              <div class="buy-now-area">
-                     <button type="submit" class="button-submit" id="buynow">BUY NOW:$<%=product.buyNow%></button>
+                 <div> <button type="submit" class="button-submit" id="buynow">BUY NOW: <span class="convertMoney"><%=product.buyNow%></span> </button></div>
                  <a href="#">
                  <div class="add-wishlist">
                      <i class="fas fa-star" style="color: yellow"></i>
@@ -763,11 +760,6 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
              }
         };
     };
-    var bgt= document.getElementById("bargaintxt").value;
-    var bgb= document.getElementById("bargainbtn");
-        bgb.addEventListener('click',function (){
-            console.log(bgt)
-        })
 </script>
 <script type="text/javascript" src="assets/js/Products_Detail.js"></script>
 <script type="text/javascript" src="assets/js/general.js"></script>

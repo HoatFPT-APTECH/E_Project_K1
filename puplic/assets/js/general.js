@@ -70,6 +70,14 @@ function amount(){ //display number products bought
 }
 removeItemClient();
 amount();
+var cmy=document.querySelectorAll('.convertMoney');
+var convert= new Intl.NumberFormat('en-US',{
+    style:'currency',
+    currency:'USD'
+});
+cmy.forEach(function (element){
+    element.innerHTML=convert.format(element.innerHTML);
+});
 
 
 
