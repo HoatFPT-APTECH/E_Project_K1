@@ -1090,15 +1090,6 @@
 <%-include('footer.ejs')%>
 <script type="text/javascript">
     var tEnd=[],counDownDate=[],ID=[],x=[],now=[],distance=[],days=[],hours=[],minutes=[],seconds=[];
-    var amount=document.querySelectorAll('.amount')
-    amount.forEach(function (am){
-        var money=am.innerHTML;
-        console.log(money)
-        (money).toLocaleString('en-US',{
-            style:'currency',
-            currency: 'USD',
-        })
-    })
 </script>
 <%for(var i=0;i<products.length;i++){%>
 <script type="text/javascript">

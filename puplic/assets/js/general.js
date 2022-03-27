@@ -52,6 +52,9 @@ function removeItem(nameRemove){  // data tranfers and detele item from localsto
        })
        window.localStorage.setItem('products',JSON.stringify(products));
 }
+function amount(){ //display number products bought
+    document.getElementById('amountBuy').innerHTML=JSON.parse(window.localStorage.getItem('products')).length;
+}
 function removeItemClient(){  // delete item from display and send name of product to function removeItem
     var itemRemove=document.querySelectorAll('.remove-cart');
     itemRemove.forEach(function (btn,index){
@@ -65,9 +68,6 @@ function removeItemClient(){  // delete item from display and send name of produ
         })
     });
 }
-function amount(){ //display number products bought
-    document.querySelector('.amount').innerHTML=JSON.parse(window.localStorage.getItem('products')).length;
-}
 removeItemClient();
 amount();
 var cmy=document.querySelectorAll('.convertMoney');
@@ -78,6 +78,7 @@ var convert= new Intl.NumberFormat('en-US',{
 cmy.forEach(function (element){
     element.innerHTML=convert.format(element.innerHTML);
 });
+
 
 
 
