@@ -1053,9 +1053,6 @@ input[type="submit"] {
     margin-bottom: 50px;
 }
 
-.section-header-2 .left {
-    width: calc(100% - 110px);
-}
 
 .section-header-2 .left .thumb {
     width: 70px;
@@ -1072,7 +1069,6 @@ input[type="submit"] {
 }
 
 .section-header-2 .left .title {
-    width: calc(100% - 70px);
     padding-left: 15px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
