@@ -122,7 +122,7 @@
                     </li>
                 </ul>
                 <form class="search-form" method="get" action="/SearchResults">
-                    <input type="text" placeholder="Search for brand, model...." name="search">
+                    <input type="text" placeholder="Search for brand, model...." name="search" required>
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
                 <div class="search-bar d-md-none">
@@ -252,7 +252,7 @@
                  </div>
                  <div  class="form-submit-abid">
                      <form action="/productDetail/<%=product.ID%>"  method="get">
-                         <input type="number" name="barGain" placeholder="Enter you amount" id="bargaintxt" >
+                         <input type="number" name="barGain" placeholder="Enter you amount" id="bargaintxt" required >
                          <button type="submit"  class="button-submit" id="bargainbtn">Submit A Bid</button>
                      </form>
                  </div>
@@ -760,6 +760,23 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
              }
         };
     };
+    var smitbid=document.querySelector('.button-submit');
+    var iptbarGain=document.getElementById('bargaintxt');
+    smitbid.setAttribute('disabled',true)
+    iptbarGain.addEventListener('change',function (){
+        var barGain=iptbarGain.value, crtPr= <%- JSON.stringify( product.priceCurrent)%>;
+        if (barGain>=crtPr){
+            smitbid.disabled=false;
+            smitbid.addEventListener('click',function (){
+                confirm('Submit A bid Sucessfully');
+            })
+        }
+        else {
+            smitbid.disabled=false;
+            smitbid.addEventListener('click',function (){
+                confirm('Your Price Must >= Current Price');
+            })
+        }})
 </script>
 <script type="text/javascript" src="assets/js/Products_Detail.js"></script>
 <script type="text/javascript" src="assets/js/general.js"></script>

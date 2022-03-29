@@ -199,9 +199,6 @@ app.get('/auction_3',function (req,res){
         app.get('/Sign_Up',function (req,res){
             res.render('Sign_Up');
         });
-        app.get('/Dashboard',function (req,res){
-            res.render('Dashboard');
-        });
         app.get('/profile',function (req,res){
             res.render('profile');
         });
