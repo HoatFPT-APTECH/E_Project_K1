@@ -203,7 +203,16 @@ app.get('/auction_3',function (req,res){
             res.render('profile');
         });
         app.get('/MyBids',function (req,res){
-            res.render('MyBids');
+            var sql2="select  * from Nhom2_Products\n" +
+                "inner join Nhom2_Category on Nhom2_Products.ID_Category=Nhom2_Category.ID_Category\n" +
+                "where ID in(25,12,28,19)";
+            conn.query(sql2,function (err,rs){
+                if(err) console.log(err)
+                else
+                    res.render('MyBids',{
+                       products:rs
+                    })
+            });
         });
         app.get('/Winning-Bid',function (req,res){
             res.render('Winning-Bid');
