@@ -23,7 +23,7 @@
                 </ul>
                 <ul class="cart-button-area">
                     <li>
-                        <button  style="background: none;border: none" class="cart-button" id="cart-button" onclick="openCart(this)" ><i class="flaticon-shopping-basket"></i><span class="amount">0</span></button>
+                        <button  style="background: none;border: none" class="cart-button" id="cart-button" onclick="openCart(this)" ><i class="flaticon-shopping-basket"></i><span class="amount" id="amountBuy">0</span></button>
                     </li>
                     <li>
                         <a href="/Sign_In" class="user-button"><i class="flaticon-user"></i></a>
@@ -72,22 +72,8 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="#">About us</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">About us</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact us</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
                         <a href="#">My Account</a>
                         <ul class="submenu">
-                            <li>
-                                <a href="/Dashboard">Dashboard</a>
-                            </li>
                             <li>
                                 <a href="/profile">Personal Profile</a>
                             </li>
@@ -98,6 +84,17 @@
                                 <a href="/Winning-Bid" style="border: none">Winning Bids</a>
                             </li>
 
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">About us</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/aboutus">About us</a>
+                            </li>
+                            <li>
+                                <a href="/contact_Us" style="border: none">Contact us</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -134,4 +131,3 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="assets/js/general.js"></script>

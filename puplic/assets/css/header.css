@@ -1822,7 +1822,7 @@ header {
 
 /*Cart Area Sidebar Starts*/
 .cart-sidebar-area {
-    background-color: #0a3d62;
+    background:linear-gradient(139deg,#5A4BCC,#4582D9);
     max-width: 350px;
     width: 100%;
     height: 100vh;

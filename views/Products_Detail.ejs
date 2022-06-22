@@ -43,7 +43,7 @@
                 </ul>
                 <ul class="cart-button-area">
                     <li>
-                        <button  style="background: none;border: none" class="cart-button" id="cart-button" onclick="openCart(this)" ><i class="flaticon-shopping-basket"></i><span class="amount">08</span></button>
+                        <button  style="background: none;border: none" class="cart-button" id="cart-button" onclick="openCart(this)" ><i class="flaticon-shopping-basket"></i><span class="amount" id="amountBuy">0</span></button>
                     </li>
                     <li>
                         <a href="/Sign_In" class="user-button"><i class="flaticon-user"></i></a>
@@ -98,7 +98,7 @@
                                 <a href="#">About us</a>
                             </li>
                             <li>
-                                <a href="#">Contact us</a>
+                                <a href="#" style="border: none">Contact us</a>
                             </li>
                         </ul>
                     </li>
@@ -122,7 +122,7 @@
                     </li>
                 </ul>
                 <form class="search-form" method="get" action="/SearchResults">
-                    <input type="text" placeholder="Search for brand, model...." name="search">
+                    <input type="text" placeholder="Search for brand, model...." name="search" required>
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
                 <div class="search-bar d-md-none">
@@ -197,29 +197,26 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
             <!-- Image text -->
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
 
             <!-- Thumbnail images -->
             <div class="row1">
-                <div class="column">
-                    <img class="demo cursor" src="<%=product.img1%>"  onclick="currentSlide(1)" alt="Image of product:1">
+                <div class="column" style="margin-left: 80px">
+                    <img class="demo cursor" src="<%=product.img1%>"  onclick="currentSlide(1)" alt="Image of Product: 1">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="<%=product.img2%>" onclick="currentSlide(2)" alt="Image of product:2">
+                    <img class="demo cursor" src="<%=product.img2%>" onclick="currentSlide(2)" alt="Image of Product: 2">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="<%=product.img3%>"  onclick="currentSlide(3)" alt="Image of product:3">
+                    <img class="demo cursor" src="<%=product.img3%>"  onclick="currentSlide(3)" alt="Image of Product: 3">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="<%=product.img4%>"  onclick="currentSlide(4)" alt="Image of product:4">
+                    <img class="demo cursor" src="<%=product.img4%>"  onclick="currentSlide(4)" alt="Image of Product: 4">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="<%=product.img5%>"  onclick="currentSlide(5)" alt="Image of product:5">
+                    <img class="demo cursor" src="<%=product.img5%>"  onclick="currentSlide(5)" alt="Image of Product: 5">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="<%=product.img6%>"  onclick="currentSlide(6)" alt="Image of product:6">
+                    <img class="demo cursor" src="<%=product.img6%>"  onclick="currentSlide(6)" alt="Image of Product:6">
                 </div>
             </div>
         </div>
@@ -232,13 +229,13 @@
                  <h1><%= product.nameProduct %></h1>
                  <ul style="color: dimgray">
                      <li><h6> Listing ID:<%= product.ID%> |</h6></li>
-                     <li><h6> Item #: <%=product.ID_category%></h6></li>
+                     <li><h6> Item #: <%=product.ID_Category%></h6></li>
                  </ul>
              </div>
              <div class="price2">
                 <div class="price2-detail"style="padding-top:10px ">
-                    <h2>Current Price</h2>
-                    <h1 style="color: #1e7e34" >US $ <span id="priceCurrent"><%= product.priceCurrent%></span></h1>
+                    <h2 style="line-height: 90px">Current Price</h2>
+                    <h1 style="color: #1e7e34" >US <span  class="convertMoney"><%= product.priceCurrent%></span></h1>
                 </div>
                 <div class="price2-detail">
                     <h6 style="color: dimgray">Buyer's Premium</h6>
@@ -246,7 +243,7 @@
                 </div>
                 <div class="price2-detail">
                     <h6 style="color: dimgray">Bid Increment(US)</h6>
-                    <h4 style="color: darkslategray">$<%= product.bidIntcrement %></h4>
+                    <h4 style="color: darkslategray" class="convertMoney"><%= product.bidIntcrement %></h4>
                 </div>
              </div>
              <div class="submit-bid">
@@ -254,14 +251,14 @@
                      <img src="assets/images/product/search-icon.png">
                  </div>
                  <div  class="form-submit-abid">
-                     <form method="get"action="/productDetail/<%=product.ID%>">
-                         <input type="number" name="barGain" placeholder="Enter you amount"  >
-                         <button type="submit"  class="button-submit">Submit A Bid</button>
+                     <form action="/productDetail/<%=product.ID%>"  method="get">
+                         <input type="number" name="barGain" placeholder="Enter you amount" id="bargaintxt" required >
+                         <button type="submit"  class="button-submit" id="bargainbtn">Submit A Bid</button>
                      </form>
                  </div>
              </div>
              <div class="buy-now-area">
-                     <button type="submit" class="button-submit" id="buynow">BUY NOW:$<%=product.buyNow%></button>
+                 <div> <button type="submit" class="button-submit" id="buynow">BUY NOW: <span class="convertMoney"><%=product.buyNow%></span> </button></div>
                  <a href="#">
                  <div class="add-wishlist">
                      <i class="fas fa-star" style="color: yellow"></i>
@@ -393,18 +390,18 @@ Vehicles may not be driven off the lot except with a dealer plate affixed. By la
 
 Condition: Untested - Sold As-Is
 
-Employees of Sbidu, its subcontractors and affiliated companies, employees of the NYC Government and those bidding on behalf of PropertyRoom.com, its subcontractors and affiliated companies and employees of the NYC Government are not permitted to bid on or purchase NYC Fleet/DCAS assets.
+Employees of The Auctions, its subcontractors and affiliated companies, employees of the NYC Government and those bidding on behalf of PropertyRoom.com, its subcontractors and affiliated companies and employees of the NYC Government are not permitted to bid on or purchase NYC Fleet/DCAS assets.
 
                   <h5>Condition</h5>
 This ASSET is being listed on behalf of a law enforcement agency or other partner ("SELLER") by PropertyRoom.com on a Sold AS IS, WHERE IS, WITH ALL FAULTS basis, with no representation or warranty from PropertyRoom.com or SELLER. In many cases, the car, boat, truck, motorcycle, aircraft, mowers/tractors, etc. ("ASSET") sold on PropertyRoom.com comes from seizure or forfeiture, and the SELLER typically does not possess use-based knowledge of the ASSET. Further, PropertyRoom.com does not physically inspect the ASSET and cannot attest to actual working conditions. PropertyRoom.com and SELLER gather information about the ASSET from authoritative sources; still, errors may appear from time to time in the listing. PropertyRoom.com cautions any website user, shopper, bidder, etc. ("BUYER") to attempt to confirm, with us, information material to a bidding/purchasing decision.
 
 Bidding
-At this time Sbidu only accepts bidders from the United States, Canada and Mexico on Vehicles and Heavy Industrial Equipment. The Bid Now button will appear on auctions where you are qualified to place a bid.
+At this time The Auctions only accepts bidders from the United States, Canada and Mexico on Vehicles and Heavy Industrial Equipment. The Bid Now button will appear on auctions where you are qualified to place a bid.
 
                   <h5>Buyer Responsibility</h5>
 The BUYER will receive an email notification from PropertyRoom.com following the close of an auction. After fraud verification and payment settlement, we will email the BUYER instructions for retrieving the ASSET from the Will-Call Location listed above.
 
-All applicable shipping, logistics, transportation, customs, fees, taxes, export/import activities and all associated costs are the sole responsibility of the BUYER. No shipping, customs, export or import assistance is available from Sbidu.
+All applicable shipping, logistics, transportation, customs, fees, taxes, export/import activities and all associated costs are the sole responsibility of the BUYER. No shipping, customs, export or import assistance is available from The Auctions.
 
 When applicable for a given ASSET, BUYER bears responsibility for determining motor vehicle registration requirements in the applicable jurisdiction as well as costs, including any fees, registration fees, taxes, etc., owed as a result of BUYER registering an ASSET; for example, BUYER bears sole responsibility for all title/registration/smog and other such fees.
 
@@ -435,7 +432,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                   </tr>
               </table>
               <h3>Notes</h3>
-              <p>Please carefully review our shipping and returns policy before committing to a bid. From time to time, and at its sole discretion, Sbidu may change the prevailing fee structure for shipping and handling.</p>
+              <p>Please carefully review our shipping and returns policy before committing to a bid. From time to time, and at its sole discretion, The Auctions may change the prevailing fee structure for shipping and handling.</p>
           </div>
           </div>
           <div id="bid-history" style="display: none">>
@@ -516,7 +513,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                           </div>
                           </div>
                           <div class="question">
-                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                              <p>All successful bidders can confirm their winning bid by checking the “The Auctions”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
                           </div>
                       </button>
                       <button class="faq-item">
@@ -528,7 +525,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                               </div>
                           </div>
                           <div class="question">
-                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                              <p>All successful bidders can confirm their winning bid by checking the “The Auctions”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
                           </div>
                       </button>
                       <button class="faq-item">
@@ -540,7 +537,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                               </div>
                           </div>
                           <div class="question">
-                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                              <p>All successful bidders can confirm their winning bid by checking the "The Auctions”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
                           </div>
                       </button>
                       <button class="faq-item">
@@ -552,7 +549,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                               </div>
                           </div>
                           <div class="question">
-                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                              <p>All successful bidders can confirm their winning bid by checking the "The Auctions”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
                           </div>
                       </button>
                       <button class="faq-item">
@@ -564,7 +561,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                               </div>
                           </div>
                           <div class="question">
-                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                              <p>All successful bidders can confirm their winning bid by checking the “The Auctions”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
                           </div>
                       </button>
                       <button class="faq-item">
@@ -576,7 +573,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                               </div>
                           </div>
                           <div class="question">
-                              <p>All successful bidders can confirm their winning bid by checking the “Sbidu”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
+                              <p>All successful bidders can confirm their winning bid by checking the “The Auctions”. In addition, all successful bidders will receive an email notifying them of their winning bid after the auction closes.</p>
                           </div>
                       </button>
                   </div>
@@ -594,11 +591,14 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                  <img src="./assets/images/footer/newslater.png" alt="footer">
              </div>
               <div class="Subcribe" >
-                  <h5 style="color: #5a4bcc;font-weight: 600">Subscribe to Sbidu</h5>
+                  <h5 style="color: #5a4bcc;font-weight: 600">Subscribe to The Auctions</h5>
                   <h2 style="font-weight: 800">To Get Exclusive Benefits</h2>
                   <form method="get" action="#">
                       <input type="email" name="email" placeholder="Enter Your Email">
-                      <button type="submit" class="button-submit">SUBCRIBE</button>
+                      <button type="submit" class="button-submit" style="width: 150px;
+    position: absolute;
+    top: 178px;
+    right: 63px;">SUBCRIBE</button>
                   </form>
               </div>
           </div>
@@ -619,7 +619,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
               <div >
                   <ul>
                       <li><a href="#"> <h4>About Us</h4></a> </li>
-                      <li><a href="#">About Sbidu</a> </li>
+                      <li><a href="#">About The Auctions</a> </li>
                       <li><a href="#">Help</a> </li>
                       <li><a href="#">Affiliates</a> </li>
                       <li><a href="#">Jobs</a> </li>
@@ -634,7 +634,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
                       <li><a href="#">Your Account</a> </li>
                       <li><a href="#">Safe and Secure</a> </li>
                       <li><a href="#">Shipping Information</a> </li>
-                      <li><a href="#">Contact Us</a> </li>
+                      <li><a href="#" style="border: none">Contact Us</a> </li>
                       <li><a href="#">Help & FAQ</a> </li>
                   </ul>
               </div>
@@ -679,7 +679,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
               <div style="padding-top: 30px">
                   <ul >
                       <li style="color: white">@Copyright 2021</li>
-                      <li style="color: white">|<span style="color: orangered;padding-left: 10px">Sbidu</span>
+                      <li style="color: white">|<span style="color: orangered;padding-left: 10px">The Auctions</span>
                           By
                           <span style="color:orangered">
                               Uiaxis
@@ -719,7 +719,7 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
         // If the count down is over, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("time").innerHTML = "AUCTION ENDED";
         }
     }, 1000);
     //end timedown
@@ -763,11 +763,23 @@ BUYER is responsible for all storage fees at time of pick-up. See above under IM
              }
         };
     };
-     var submitABid=document.querySelector('.button-submit');
-     submitABid.addEventListener('click',function (){
-     })
-     var priceCurrent=parseInt(document.getElementById('priceCurrent').innerHTML)
-     console.log(submitABid,priceCurrent);
+    var smitbid=document.querySelector('.button-submit');
+    var iptbarGain=document.getElementById('bargaintxt');
+    smitbid.setAttribute('disabled',true)
+    iptbarGain.addEventListener('change',function (){
+        var barGain=iptbarGain.value, crtPr= <%- JSON.stringify( product.priceCurrent)%>;
+        if (barGain>=crtPr){
+            smitbid.disabled=false;
+            smitbid.addEventListener('click',function (){
+                confirm('Submit A bid Sucessfully');
+            })
+        }
+        else {
+            smitbid.disabled=false;
+            smitbid.addEventListener('click',function (){
+                confirm('Your Price Must >= Current Price');
+            })
+        }})
 </script>
 <script type="text/javascript" src="assets/js/Products_Detail.js"></script>
 <script type="text/javascript" src="assets/js/general.js"></script>

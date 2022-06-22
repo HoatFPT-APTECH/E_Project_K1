@@ -669,6 +669,7 @@ input[type="submit"] {
 /*Section Header*/
 .mb-30-none {
     margin-bottom: -30px !important;
+    margin-top: 45px;
 }
 
 .tab-item {
@@ -1052,9 +1053,6 @@ input[type="submit"] {
     margin-bottom: 50px;
 }
 
-.section-header-2 .left {
-    width: calc(100% - 110px);
-}
 
 .section-header-2 .left .thumb {
     width: 70px;
@@ -1071,7 +1069,6 @@ input[type="submit"] {
 }
 
 .section-header-2 .left .title {
-    width: calc(100% - 70px);
     padding-left: 15px;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -1989,7 +1986,7 @@ header {
 
 /*Cart Area Sidebar Starts*/
 .cart-sidebar-area {
-    background-color: #0a3d62;
+   background: linear-gradient(139deg,#5A4BCC,#4582D9);;
     max-width: 350px;
     width: 100%;
     height: 100vh;
@@ -2842,7 +2839,7 @@ div[class*="auction"] .custom-button {
 
 .auction-item-1 .auction-thumb img {
     width: 100%;
-    height: 170px;
+    height: 180px;
 }
 
 .auction-item-1 .auction-content {
@@ -3197,7 +3194,8 @@ div[class*="auction"] .custom-button {
 }
 
 .auction-item-3 .auction-thumb img {
-    width: 100%;
+    width: auto;
+    height: 180px;
 }
 
 .auction-item-3 .auction-content {
@@ -5459,8 +5457,8 @@ div[class*="auction"] .custom-button {
     background: #ffffff;
     font-size: 14px;
     position: absolute;
-    right: 17px;
-    top: 16px;
+    right: 2px;
+    top: 1px;
     bottom: 1px;
     border-radius: 19px;
     border: none;
@@ -5494,7 +5492,7 @@ div[class*="auction"] .custom-button {
 
 .pagination li a.active, .pagination li a:hover {
     color: #ffffff;
-    background: -ms-linear-gradient(166deg, #f22876 0%, #942dd9 100%);
+    background:linear-gradient(166deg, #f22876 0%, #942dd9 100%);
 }
 
 /*Product Details Section Starts Here*/

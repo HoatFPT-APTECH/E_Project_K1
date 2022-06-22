@@ -37,7 +37,7 @@ for (var i=0;i<products.length;i++){  //hien thi localstorge
     var cart=document.querySelector('.cart-products');
        var creatdiv=document.createElement('div');
 
-       var divContent=' <div class="single-product-item"> <div class="thumb"> <a href="#0"><img src="'+products[i].img+'" alt="shop"></a> </div> <div class="content"> <h4 class="title"><a href="#0">'+products[i].name+'</a></h4> <div class="price"><span class="pprice">$'+products[i].price+'</span> </div> <button class="remove-cart">Remove</button> </div> </div>'
+       var divContent=' <div class="single-product-item"> <div class="thumb"> <a href="/productDetail/'+products[i].id+'"><img src="'+products[i].img+'" alt="shop"></a> </div> <div class="content"> <h4 class="title"><a href="/productDetail/'+products[i].id+'" style="color: white">'+products[i].name+'</a></h4> <div class="price"><span class="pprice">Price: $'+products[i].price+'</span> </div> <button class="remove-cart">Remove</button> </div> </div>'
        creatdiv.innerHTML=divContent;
        cart.append(creatdiv);
 }
@@ -52,11 +52,15 @@ function removeItem(nameRemove){  // data tranfers and detele item from localsto
        })
        window.localStorage.setItem('products',JSON.stringify(products));
 }
+function amount(){ //display number products bought
+    document.getElementById('amountBuy').innerHTML=JSON.parse(window.localStorage.getItem('products')).length;
+}
 function removeItemClient(){  // delete item from display and send name of product to function removeItem
     var itemRemove=document.querySelectorAll('.remove-cart');
     itemRemove.forEach(function (btn,index){
         btn.addEventListener('click',function (evn){
             var itemRemove= evn.target.parentElement;
+            console.log(evn.target.parentElement)
             var nameRemove=itemRemove.querySelector('.content>.title>a').innerHTML;
             removeItem(nameRemove);
             itemRemove.parentElement.style.display='none';
@@ -64,11 +68,17 @@ function removeItemClient(){  // delete item from display and send name of produ
         })
     });
 }
-function amount(){ //display number products bought
-    document.querySelector('.amount').innerHTML=JSON.parse(window.localStorage.getItem('products')).length;
-}
 removeItemClient();
 amount();
+var cmy=document.querySelectorAll('.convertMoney');
+var convert= new Intl.NumberFormat('en-US',{
+    style:'currency',
+    currency:'USD'
+});
+cmy.forEach(function (element){
+    element.innerHTML=convert.format(element.innerHTML);
+});
+
 
 
 
